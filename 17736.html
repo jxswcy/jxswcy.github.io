@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jxswcy.top&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="爆破需要密码，找不如用pydictor自己生成， 核心功能字典 基础字典123python pydictor.py -base L --len 2 3 --encode b64python pydictor.py -base dLc --len 1 3 -o &#x2F;awesome&#x2F;pwdpython pydictor.py -base d --len 4 4 --head Pa5sw0rd --out">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pydictor">
+<meta property="og:url" content="https://jxswcy.top/17736.html">
+<meta property="og:site_name" content="jxswcy&#39;s blog">
+<meta property="og:description" content="爆破需要密码，找不如用pydictor自己生成， 核心功能字典 基础字典123python pydictor.py -base L --len 2 3 --encode b64python pydictor.py -base dLc --len 1 3 -o &#x2F;awesome&#x2F;pwdpython pydictor.py -base d --len 4 4 --head Pa5sw0rd --out">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-08T07:41:46.000Z">
+<meta property="article:modified_time" content="2021-04-10T07:20:47.255Z">
+<meta property="article:author" content="jxswcy">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://jxswcy.top/17736.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;jxswcy.top&#x2F;17736.html&quot;,&quot;path&quot;:&quot;17736.html&quot;,&quot;title&quot;:&quot;pydictor&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>pydictor | jxswcy's blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jxswcy's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hello CTF</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E5%8A%9F%E8%83%BD%E5%AD%97%E5%85%B8"><span class="nav-number">1.</span> <span class="nav-text">核心功能字典</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jxswcy"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">jxswcy</p>
+  <div class="site-description" itemprop="description">Life is short. You need Python.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/17736.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          pydictor
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-08 15:41:46" itemprop="dateCreated datePublished" datetime="2021-04-08T15:41:46+08:00">2021-04-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-10 15:20:47" itemprop="dateModified" datetime="2021-04-10T15:20:47+08:00">2021-04-10</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>爆破需要密码，找不如用<a target="_blank" rel="noopener" href="https://github.com/LandGrey/pydictor">pydictor</a>自己生成，</p>
+<h1 id="核心功能字典"><a href="#核心功能字典" class="headerlink" title="核心功能字典"></a>核心功能字典</h1><ol>
+<li>基础字典<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -base L --len 2 3 --encode b64</span><br><span class="line">python pydictor.py -base dLc --len 1 3 -o /awesome/<span class="built_in">pwd</span></span><br><span class="line">python pydictor.py -base d --len 4 4 --head Pa5sw0rd --output D:\exists\or\not\dict.txt</span><br></pre></td></tr></table></figure></li>
+<li>自定义字符集字典<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -char <span class="string">&quot;asdf123._@ &quot;</span> --len 1 3 --tail @site.com</span><br></pre></td></tr></table></figure></li>
+<li>排列组合字典<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -chunk abc 123 <span class="string">&quot;!@#&quot;</span> @ . _ <span class="string">&quot; &quot;</span> --head a --tail @pass --encode md5</span><br></pre></td></tr></table></figure></li>
+<li>语法引擎解析字典<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py --conf</span><br><span class="line"><span class="comment">#用默认的&quot;/funcfg/build.conf&quot;文件建立字典</span></span><br><span class="line">python pydictor.py --conf /my/other/awesome.conf</span><br><span class="line">python pydictor.py --conf <span class="string">&quot;[0-9]&#123;6,6&#125;&lt;none&gt;[a-f,abc,123,!@#]&#123;1,1&#125;&lt;none&gt;&quot;</span> --encode md5 --output parsing.txt</span><br></pre></td></tr></table></figure></li>
+<li>模式字典快速生成<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python3 pydictor.py --head abc --pattern <span class="string">&quot;[0-9]&#123;1,1&#125;&lt;none&gt;[0-9]&#123;1,1&#125;&lt;none&gt;[a-z]&#123;1,1&#125;&lt;none&gt;[0-9]&#123;1,1&#125;&lt;none&gt;[0-9]&#123;1,1&#125;&lt;none&gt;[a-z]&#123;1,1&#125;&lt;none&gt;[0-9]&#123;1,1&#125;&lt;none&gt;[0-9]&#123;1,1&#125;&lt;none&gt;&quot;</span> -o output.txt</span><br></pre></td></tr></table></figure></li>
+<li>规则扩展字典<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -extend bob --level 4 --len 4 12</span><br><span class="line">python pydictor.py -extend liwei zwell.com --more --leet 0 1 2 11 21 --level 2 --len 6 16 --occur <span class="string">&quot;&lt;=10&quot;</span> <span class="string">&quot;&gt;0&quot;</span> <span class="string">&quot;&lt;=2&quot;</span> -o /possbile/wordlist.lst</span><br></pre></td></tr></table></figure></li>
+<li>社会工程学字典<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py --sedb</span><br><span class="line"></span><br><span class="line">                              _ _      _</span><br><span class="line">              _ __  _   _  __| (_) ___| |_ ___  _ __</span><br><span class="line">             | <span class="string">&#x27;_ \| | | |/ _` | |/ __| __/ _ \| &#x27;</span>__|</span><br><span class="line">             | |_) | |_| | (_| | | (__| || (_) | |</span><br><span class="line">             | .__/ \__, |\__,_|_|\___|\__\___/|_|</span><br><span class="line">             |_|    |___/                         </span><br><span class="line"></span><br><span class="line">                   Social Engineering Dictionary Builder</span><br><span class="line">                                            Build by LandGrey</span><br><span class="line">    ----------------------------[ <span class="built_in">command</span> ]----------------------------</span><br><span class="line">    [+]<span class="built_in">help</span> desc             [+]<span class="built_in">exit</span>/quit            [+]clear/cls</span><br><span class="line">    [+]show option           [+]<span class="built_in">set</span> option arguments [+]rm option</span><br><span class="line">    [+]len minlen maxlen     [+]head prefix          [+]tail suffix</span><br><span class="line">    [+]encode <span class="built_in">type</span>           [+]occur L d s          [+]types L d s</span><br><span class="line">    [+]regex string          [+]level code           [+]leet code</span><br><span class="line">    [+]output directory      [+]run</span><br><span class="line"></span><br><span class="line">    ----------------------------[ option ]----------------------------</span><br><span class="line">    [+]cname                 [+]ename                [+]sname</span><br><span class="line">    [+]birth                 [+]usedpwd              [+]phone</span><br><span class="line">    [+]uphone                [+]hphone               [+]email</span><br><span class="line">    [+]postcode              [+]nickname             [+]idcard</span><br><span class="line">    [+]jobnum                [+]otherdate            [+]usedchar</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>pydictor SEDB&gt;&gt;<br>根据以下信息：</p>
+<p>information items    value<br>chinese name    李伟<br>pinyin name    liwei<br>simple name    lw<br>simple name    Lwei<br>english name    zwell<br>birthday    19880916<br>used password    liwei123456.<br>used password    liwei@19880916<br>used password    lw19880916_123<br>used password    abc123456<br>phone number    18852006666<br>used phone number    15500998080<br>home phone    76500100<br>company phone    010-61599000<br>email account    <a href="mailto:&#51;&#x33;&#49;&#50;&#x35;&#x35;&#48;&#48;&#x40;&#x71;&#113;&#46;&#99;&#111;&#109;">&#51;&#x33;&#49;&#50;&#x35;&#x35;&#48;&#48;&#x40;&#x71;&#113;&#46;&#99;&#111;&#109;</a><br>email account    <a href="mailto:&#x31;&#x33;&#x35;&#x36;&#49;&#50;&#48;&#55;&#x38;&#55;&#x38;&#64;&#49;&#x36;&#51;&#46;&#99;&#x6f;&#109;">&#x31;&#x33;&#x35;&#x36;&#49;&#50;&#48;&#55;&#x38;&#55;&#x38;&#64;&#49;&#x36;&#51;&#46;&#99;&#x6f;&#109;</a><br>email account    <a href="mailto:&#119;&#101;&#105;&#x77;&#101;&#105;&#108;&#x69;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;">&#119;&#101;&#105;&#x77;&#101;&#105;&#108;&#x69;&#x40;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#x63;&#111;&#109;</a><br>email account    <a href="mailto:&#x77;&#x65;&#x69;&#48;&#49;&#x30;&#x77;&#x65;&#105;&#x40;&#104;&#111;&#116;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;">&#x77;&#x65;&#x69;&#48;&#49;&#x30;&#x77;&#x65;&#105;&#x40;&#104;&#111;&#116;&#x6d;&#97;&#x69;&#108;&#46;&#x63;&#x6f;&#109;</a><br>home postcode    663321<br>now place postcode    962210<br>common nickname    zlili<br>id card number    152726198809160571<br>student id    20051230<br>job number    100563<br>father birthday    152726195910042816<br>mother birthday    15222419621012476X<br>boy/girl friend brithday    152726198709063846<br>friend brithday    152726198802083166<br>pet name    tiger<br>crazy something    games of thrones<br>special meaning numbers    176003<br>special meaning chars    m0n5ter<br>special meaning chars    ppdog<br>使用命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py --sedb</span><br><span class="line"><span class="built_in">set</span> cname liwei</span><br><span class="line"><span class="built_in">set</span> sname lw Lwei</span><br><span class="line"><span class="built_in">set</span> ename zwell</span><br><span class="line"><span class="built_in">set</span> birth 19880916</span><br><span class="line"><span class="built_in">set</span> usedpwd liwei123456. liwei@19880916 lw19880916_123</span><br><span class="line"><span class="built_in">set</span> phone 18852006666</span><br><span class="line"><span class="built_in">set</span> uphone 15500998080</span><br><span class="line"><span class="built_in">set</span> hphone 76500100 61599000 01061599000</span><br><span class="line"><span class="built_in">set</span> email 33125500@qq.com</span><br><span class="line"><span class="built_in">set</span> email 13561207878@163.com</span><br><span class="line"><span class="built_in">set</span> email weiweili@gmail.com</span><br><span class="line"><span class="built_in">set</span> email wei010wei@hotmail.com</span><br><span class="line"><span class="built_in">set</span> postcode 663321 962210</span><br><span class="line"><span class="built_in">set</span> nickname zlili</span><br><span class="line"><span class="built_in">set</span> idcard 152726198809160571</span><br><span class="line"><span class="built_in">set</span> jobnum 20051230 100563</span><br><span class="line"><span class="built_in">set</span> otherdate 19591004 19621012</span><br><span class="line"><span class="built_in">set</span> otherdate 19870906 19880208</span><br><span class="line"><span class="built_in">set</span> usedchar tiger gof gamesthrones 176003 m0n5ter ppdog</span><br></pre></td></tr></table></figure>
+
+<p>查看当前配置然后生成字典</p>
+<p>show<br>run</p>
+<p>插件型字典(可自己根据API文档开发)</p>
+<ol>
+<li><p>一段时间内生日字典</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -plug birthday 19800101 20001231 --len 6 8</span><br></pre></td></tr></table></figure></li>
+<li><p>身份证后4/6/8位字典</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -plug pid4</span><br><span class="line">python pydictor.py -plug pid6 --encode b64</span><br><span class="line">python pydictor.py -plug pid8 --encode sha1 -o pid8.txt</span><br></pre></td></tr></table></figure></li>
+<li><p>网页原始关键词字典</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -plug scratch                             用/funcfg/scratch.sites 文件中的多行 url 作为输入</span><br><span class="line">python pydictor.py -plug scratch http://www.example.com</span><br><span class="line">```bash</span><br><span class="line"></span><br><span class="line">内置工具(可自己根据API文档开发)</span><br><span class="line">1. 字典合并工具</span><br><span class="line">```bash</span><br><span class="line">python pydictor.py -tool combiner /my/mess/dir</span><br></pre></td></tr></table></figure></li>
+<li><p>字典比较工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -tool comparer big.txt small.txt</span><br></pre></td></tr></table></figure></li>
+<li><p>词频统计工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -tool counter s huge.txt 1000</span><br><span class="line">python pydictor.py -tool counter v /tmp/mess.txt 100</span><br><span class="line">python pydictor.py -tool counter vs huge.txt 100 --encode url -o fre.txt</span><br></pre></td></tr></table></figure></li>
+<li><p>字典处理工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -tool handler raw.txt --tail @awesome.com --encode md5</span><br><span class="line">python pydictor.py -tool handler raw.txt --len 6 16 --occur <span class="string">&quot;&quot;</span> <span class="string">&quot;=6&quot;</span> <span class="string">&quot;&lt;0&quot;</span> --encode b64 -o ok.txt</span><br></pre></td></tr></table></figure></li>
+<li><p>安全擦除字典工具</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">python</span> pydictor.<span class="keyword">py</span> -tool shredder                    擦除当前输出目录下所有字典文件</span><br><span class="line"><span class="keyword">python</span> pydictor.<span class="keyword">py</span> -tool shredder base 		         擦除当前输出目录下所有以<span class="string">&quot;base&quot;</span>开头的字典文件</span><br><span class="line"><span class="keyword">python</span> pydictor.<span class="keyword">py</span> -tool shredder /data/mess</span><br><span class="line"><span class="keyword">python</span> pydictor.<span class="keyword">py</span> -tool shredder D:\mess\<span class="number">1</span>.zip</span><br></pre></td></tr></table></figure></li>
+<li><p>合并去重工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -tool uniqbiner /my/all/dict/</span><br></pre></td></tr></table></figure></li>
+<li><p>字典去重工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -tool uniqifer /tmp/dicts.txt --output /tmp/uniq.txt</span><br></pre></td></tr></table></figure></li>
+<li><p>多字典文件组合工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python pydictor.py -tool hybrider heads.txt some_others.txt tails.txt</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jxswcy 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jxswcy 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2118.html" rel="prev" title="Mac下的快捷键">
+                  <i class="fa fa-chevron-left"></i> Mac下的快捷键
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/56591.html" rel="next" title="vulhub sync 漏洞复现">
+                  vulhub sync 漏洞复现 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jxswcy</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">365k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

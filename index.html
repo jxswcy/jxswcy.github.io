@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jxswcy.top&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="Life is short. You need Python.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="jxswcy&#39;s blog">
+<meta property="og:url" content="https://jxswcy.top/index.html">
+<meta property="og:site_name" content="jxswcy&#39;s blog">
+<meta property="og:description" content="Life is short. You need Python.">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="jxswcy">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://jxswcy.top/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:true,&quot;isPost&quot;:false,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:&quot;&quot;,&quot;permalink&quot;:&quot;&quot;,&quot;path&quot;:&quot;index.html&quot;,&quot;title&quot;:&quot;&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>jxswcy's blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jxswcy's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hello CTF</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jxswcy"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">jxswcy</p>
+  <div class="site-description" itemprop="description">Life is short. You need Python.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/83a81e89.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/83a81e89.html" class="post-title-link" itemprop="url">Daily CTF Writeup 20210607</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-07 21:35:22" itemprop="dateCreated datePublished" datetime="2021-06-07T21:35:22+08:00">2021-06-07</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-08 00:18:51" itemprop="dateModified" datetime="2021-06-08T00:18:51+08:00">2021-06-08</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/DailyCTF/" itemprop="url" rel="index"><span itemprop="name">DailyCTF</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Spider-75pts-Web"><a href="#Spider-75pts-Web" class="headerlink" title="Spider (75pts) - Web"></a>Spider (75pts) - Web</h1><p>地址：<a target="_blank" rel="noopener" href="https://spider.031337.xyz/">https://spider.031337.xyz</a><br>转跳地址为：<a target="_blank" rel="noopener" href="https://spider.031337.xyz/0">https://spider.031337.xyz/0</a><br>第一反应是ssti，但是测试没用，访问 <a target="_blank" rel="noopener" href="https://spider.031337.xyz/4">https://spider.031337.xyz/4</a> 时发现回包有<code>&#123;</code><br>爆破得到flag，注意把线程调低<br><img src="/83a81e89/1.png"><br><img src="/83a81e89/2.png"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ictf</span>&#123;f<span class="number">0</span>ll<span class="number">0</span>w_th<span class="number">3</span>_numb<span class="number">3</span>rs&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Add-and-Add-75pts-Crypto"><a href="#Add-and-Add-75pts-Crypto" class="headerlink" title="Add and Add (75pts) - Crypto"></a>Add and Add (75pts) - Crypto</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;flag.txt&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    flag = f.read().strip().encode()</span><br><span class="line"></span><br><span class="line">x = <span class="built_in">bytes</span>([random.randrange(<span class="number">256</span>)])</span><br><span class="line"><span class="keyword">while</span> flag:</span><br><span class="line">    y = flag[:<span class="built_in">len</span>(x)]</span><br><span class="line">    flag = flag[<span class="built_in">len</span>(x):]</span><br><span class="line">    x += <span class="built_in">bytes</span>([(a + b) % <span class="number">256</span> <span class="keyword">for</span> a, b <span class="keyword">in</span> <span class="built_in">zip</span>(x, y)])</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&quot;output.txt&quot;</span>, <span class="string">&quot;w&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(x[<span class="number">1</span>:].<span class="built_in">hex</span>())</span><br><span class="line"></span><br><span class="line"><span class="comment">#output.txt</span></span><br><span class="line">26209a23a154fe21578e0182d5c2621c89810d86d5b82f8fbeed62f03921c3218a89088a00886c85b6f135f53823c64df7e88a</span><br></pre></td></tr></table></figure>
+<p>梳理逻辑：<br>第一轮，(x + ord(‘i’)) % 256=int(‘26’,16)，x=189<br>第二轮，x=[189,38] y=[99,116]<br>第三轮，x=[189,38,32,154]……</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">stringT = <span class="string">&#x27;26209a23a154fe21578e0182d5c2621c89810d86d5b82f8fbeed62f03921c3218a89088a00886c85b6f135f53823c64df7e88a&#x27;</span></span><br><span class="line">listT = [<span class="number">0</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(stringT)//<span class="number">2</span>):</span><br><span class="line">    listT.append(<span class="built_in">int</span>(stringT[<span class="number">2</span>*i:<span class="number">2</span>*i+<span class="number">2</span>],<span class="number">16</span>))</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find</span>(<span class="params">a,b</span>):</span></span><br><span class="line">    <span class="keyword">if</span> a&gt;b:</span><br><span class="line">        <span class="keyword">return</span> a-b</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">256</span>+a-b</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">256</span>):</span><br><span class="line">    listT[<span class="number">0</span>] = j</span><br><span class="line">    flagT = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">51</span>):</span><br><span class="line">        <span class="keyword">if</span> i == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        <span class="keyword">elif</span> i+<span class="number">1</span> &lt;= <span class="number">2</span>:</span><br><span class="line">            tmp = find(listT[i],listT[i-<span class="number">1</span>])<span class="comment">#后一位减前一位</span></span><br><span class="line">        <span class="keyword">elif</span> i+<span class="number">1</span> &lt;= <span class="number">4</span>:</span><br><span class="line">            tmp = find(listT[i],listT[i-<span class="number">2</span>])<span class="comment">#4-2,3-1</span></span><br><span class="line">        <span class="keyword">elif</span> i+<span class="number">1</span> &lt;=<span class="number">8</span>:</span><br><span class="line">            tmp = find(listT[i],listT[i-<span class="number">4</span>])<span class="comment">#5-1,6-2,7-3，8-4</span></span><br><span class="line">        <span class="keyword">elif</span> i+<span class="number">1</span> &lt;=<span class="number">16</span>:</span><br><span class="line">            tmp = find(listT[i],listT[i-<span class="number">8</span>])</span><br><span class="line">        <span class="keyword">elif</span> i+<span class="number">1</span> &lt;=<span class="number">32</span>:</span><br><span class="line">            tmp = find(listT[i],listT[i-<span class="number">16</span>])</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            tmp = find(listT[i],listT[i-<span class="number">32</span>])</span><br><span class="line">        flagT += <span class="built_in">chr</span>(tmp)</span><br><span class="line">    <span class="keyword">if</span> <span class="string">&#x27;ctf&#x27;</span> <span class="keyword">in</span> flagT:</span><br><span class="line">        <span class="built_in">print</span>(flagT)</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ictf</span>&#123;<span class="number">4</span>dd<span class="number">1</span>ng_<span class="number">4</span>nd_casc<span class="number">4</span>d<span class="number">1</span>ng_and_adding_<span class="number">4</span>nd_c<span class="number">4</span>scad<span class="number">1</span>ng&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="Word-50pts-Forensics"><a href="#Word-50pts-Forensics" class="headerlink" title="Word (50pts) - Forensics"></a>Word (50pts) - Forensics</h1><p>word改为zip，解压全局搜索得flag<br><img src="/83a81e89/3.png"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">ictf</span>&#123;<span class="number">4</span>ll_<span class="number">0</span>ff<span class="number">1</span>c<span class="number">3</span>_F<span class="number">1</span>l<span class="number">3</span>s_<span class="number">4</span>r<span class="number">3</span>_Z<span class="number">1</span>p<span class="number">5</span>&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/e922684a.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/e922684a.html" class="post-title-link" itemprop="url">hexo setting</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-06-05 01:57:08 / 修改时间：04:24:22" itemprop="dateCreated datePublished" datetime="2021-06-05T01:57:08+08:00">2021-06-05</time>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="修改语言"><a href="#修改语言" class="headerlink" title="修改语言"></a>修改语言</h1><p>站点配置文件</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">language:</span> <span class="built_in">zh</span>-CN</span><br></pre></td></tr></table></figure>
+
+<h1 id="启用主页等标签"><a href="#启用主页等标签" class="headerlink" title="启用主页等标签"></a>启用主页等标签</h1><p>主题配置文件</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">menu:</span></span><br><span class="line"><span class="symbol">  home:</span> / || fa fa-home</span><br><span class="line"><span class="symbol">  about:</span> <span class="meta-keyword">/about/</span> || fa fa-user</span><br><span class="line"><span class="symbol">  tags:</span> <span class="meta-keyword">/tags/</span> || fa fa-tags</span><br><span class="line"><span class="symbol">  categories:</span> <span class="meta-keyword">/categories/</span> || fa fa-th</span><br><span class="line"><span class="symbol">  archives:</span> <span class="meta-keyword">/archives/</span> || fa fa-archive</span><br></pre></td></tr></table></figure>
+
+<h1 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h1><p>主题配置文件</p>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Schemes</span></span><br><span class="line"><span class="meta">#scheme: Muse</span></span><br><span class="line"><span class="meta">#scheme: Mist</span></span><br><span class="line"><span class="meta">#scheme: Pisces</span></span><br><span class="line">scheme: Gemini</span><br></pre></td></tr></table></figure>
+
+<h1 id="隐藏网页底部-powered-By-Hexo-强力驱动"><a href="#隐藏网页底部-powered-By-Hexo-强力驱动" class="headerlink" title="隐藏网页底部 powered By Hexo / 强力驱动"></a>隐藏网页底部 powered By Hexo / 强力驱动</h1><figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!--</span></span></span><br><span class="line"><span class="comment"><span class="xml">&#123;%- if theme.footer.powered %&#125;</span></span></span><br><span class="line"><span class="comment"><span class="xml">  &lt;div class=&quot;powered-by&quot;&gt;</span></span></span><br><span class="line"><span class="comment"><span class="xml">    &#123;%- set next_site = &#x27;https://theme-next.js.org&#x27; if theme.scheme === &#x27;Gemini&#x27; else &#x27;https://theme-next.js.org/&#x27; + theme.scheme | lower + &#x27;/&#x27; %&#125;</span></span></span><br><span class="line"><span class="comment"><span class="xml">    </span></span><span class="template-variable">&#123;&#123;<span class="name">-</span> __(<span class="name">&#x27;footer.powered&#x27;</span>, next_url(<span class="name">&#x27;https://hexo.io&#x27;</span>, <span class="string">&#x27;Hexo&#x27;</span>) + <span class="string">&#x27; &amp; &#x27;</span> + next_url(<span class="name">next_site</span>, <span class="string">&#x27;NexT.&#x27;</span> + theme.scheme)) &#125;&#125;</span><span class="xml"><span class="comment"></span></span></span><br><span class="line"><span class="comment"><span class="xml">  &lt;/div&gt;</span></span></span><br><span class="line"><span class="comment"><span class="xml">&#123;%- endif %&#125;</span></span></span><br><span class="line"><span class="comment"><span class="xml">--&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h1 id="显示进度"><a href="#显示进度" class="headerlink" title="显示进度"></a>显示进度</h1><p>主题配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">scrollpercent:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="启用本地搜索"><a href="#启用本地搜索" class="headerlink" title="启用本地搜索"></a>启用本地搜索</h1><p>安装<code>hexo-generator-search</code>，注意不是<code>hexo-generator-searchdb</code><sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-<span class="keyword">search</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<p>主题配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>站点配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">content:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>path 是生成的搜索文件的路径，默认是 search.xml，也可以使用 json 格式，改为 search.json。<br>field 是搜索的范围，默认是 post，即只搜索发布的文章，也可以改为 page（搜索页面，即 page 类型的页面，不含发布的文航）或者 all（搜索全部）<br>content 是指是否搜索文章的内容，默认为 true，如果改为 false 的话则只搜索标题、说明等头部内容，不搜索文章的正文。</p>
+<h1 id="修改文章底部-标签"><a href="#修改文章底部-标签" class="headerlink" title="修改文章底部#标签"></a>修改文章底部#标签</h1><p><code>/themes/next/layout/_macro/post.njk</code>下定位<code>rel=&quot;tag&quot;</code>，将后面的<code>&#123;&#123; tag_indicate &#125;&#125;</code>换成<code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
+<h1 id="实现字数统计和阅读需要时长显示"><a href="#实现字数统计和阅读需要时长显示" class="headerlink" title="实现字数统计和阅读需要时长显示"></a>实现字数统计和阅读需要时长显示</h1><p>安装<code>hexo-symbols-count-time</code></p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-symbols-<span class="built_in">count</span>-<span class="built_in">time</span> <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<p>站点配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">symbols_count_time:</span></span><br><span class="line">  <span class="attr">symbols:</span> <span class="literal">true</span>                <span class="comment"># 文章字数统计</span></span><br><span class="line">  <span class="attr">time:</span> <span class="literal">true</span>                   <span class="comment"># 文章阅读时长</span></span><br><span class="line">  <span class="attr">total_symbols:</span> <span class="literal">true</span>          <span class="comment"># 站点总字数统计</span></span><br><span class="line">  <span class="attr">total_time:</span> <span class="literal">true</span>             <span class="comment"># 站点总阅读时长</span></span><br><span class="line">  <span class="attr">exclude_codeblock:</span> <span class="literal">false</span>     <span class="comment"># 排除代码字数统计</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="启用代码块复制选项"><a href="#启用代码块复制选项" class="headerlink" title="启用代码块复制选项"></a>启用代码块复制选项</h1><p>主题配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">copy_button:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="修改文章链接"><a href="#修改文章链接" class="headerlink" title="修改文章链接"></a>修改文章链接</h1><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-abbrlink <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<p>修改站点配置文件</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">permalink:</span> :abbrlink.html</span><br><span class="line"><span class="symbol">abbrlink:</span></span><br><span class="line"><span class="symbol">  alg:</span> crc32   <span class="meta">#算法： crc16(default) and crc32</span></span><br><span class="line"><span class="symbol">  rep:</span> hex     <span class="meta">#进制： dec(default) and hex</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="增加图片"><a href="#增加图片" class="headerlink" title="增加图片"></a>增加图片</h1><figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-<span class="built_in">image</span> --<span class="built_in">save</span></span><br></pre></td></tr></table></figure>
+<p>由于此功能会与文章链接冲突，解决方案<sup id="fnref:2"><a href="#fn:2" rel="footnote">2</a></sup><br>修改<code>blog/node_modules/hexo-asset-image/index.js</code>配置，在<code>var link = data.permalink;</code>下增加变量<code>var abbrlink = data.abbrlink;</code>，将<code>//$(this).attr(&#39;src&#39;, config.root + link + src);</code>修改为<code>$(this).attr(&#39;src&#39;, config.root + abbrlink + &#39;/&#39; + src);</code><br><img src="/e922684a/1.png"></p>
+<h1 id="加密文章"><a href="#加密文章" class="headerlink" title="加密文章"></a>加密文章</h1><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install <span class="comment">--save hexo-blog-encrypt</span></span><br></pre></td></tr></table></figure>
+<p>站点配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">encrypt:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>文章头部加上对应字段</p>
+<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">password:</span> jxswcy</span><br><span class="line"><span class="symbol">abstract:</span> 密码：jxswcy</span><br><span class="line"><span class="symbol">message:</span>  输入密码，查看文章</span><br></pre></td></tr></table></figure>
+
+<h1 id="设置头像"><a href="#设置头像" class="headerlink" title="设置头像"></a>设置头像</h1><p>将图片放入<code>Hexo\source\image</code>下替换<br>主题配置文件</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">favicon:</span><br><span class="line">  small: <span class="regexp">/images/</span>favicon-<span class="number">16</span>x16-<span class="keyword">next</span>.ico</span><br><span class="line">  medium: <span class="regexp">/images/</span>favicon-<span class="number">32</span>x32-<span class="keyword">next</span>.ico</span><br><span class="line">  apple_touch_icon: <span class="regexp">/images/</span>apple-touch-icon-<span class="keyword">next</span>.png</span><br><span class="line">  safari_pinned_tab: <span class="regexp">/images/</span>logo.svg</span><br><span class="line"></span><br><span class="line">avatar:</span><br><span class="line">  <span class="comment"># Replace the default image and set the url here.</span></span><br><span class="line">  url: <span class="regexp">/images/</span>avatar.png</span><br></pre></td></tr></table></figure>
+
+<h1 id="开启脚注功能"><a href="#开启脚注功能" class="headerlink" title="开启脚注功能"></a>开启脚注功能</h1><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-footnotes <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="开启进度条"><a href="#开启进度条" class="headerlink" title="开启进度条"></a>开启进度条</h1><p>主题配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">nprogress:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="统计阅读次数"><a href="#统计阅读次数" class="headerlink" title="统计阅读次数"></a>统计阅读次数</h1><p>主题配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">busuanzi_count:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="开启打赏功能"><a href="#开启打赏功能" class="headerlink" title="开启打赏功能"></a>开启打赏功能</h1><p>主题配置文件</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">reward_settings:</span></span><br><span class="line">  <span class="comment"># If true, a donate button will be displayed in every article by default.</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">animation:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">comment:</span> <span class="string">Buy</span> <span class="string">me</span> <span class="string">a</span> <span class="string">coffee</span></span><br><span class="line"></span><br><span class="line"><span class="attr">reward:</span></span><br><span class="line">  <span class="attr">wechatpay:</span> <span class="string">/images/wechatpay.png</span></span><br><span class="line">  <span class="attr">alipay:</span> <span class="string">/images/alipay.png</span></span><br></pre></td></tr></table></figure>
+
+<div id="footnotes"><hr><div id="footnotelist"><ol style="list-style:none; padding-left: 0;"><li id="fn:1"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">1.</span><span style="display: inline-block; vertical-align: top;"><a target="_blank" rel="noopener" href="https://wangjiezhe.com/posts/2018-10-29-Hexo-NexT-2/">https://wangjiezhe.com/posts/2018-10-29-Hexo-NexT-2/</a></span><a href="#fnref:1" rev="footnote"> ↩</a></li><li id="fn:2"><span style="display: inline-block; vertical-align: top; padding-right: 10px;">2.</span><span style="display: inline-block; vertical-align: top;"><a target="_blank" rel="noopener" href="https://github.com/rozbo/hexo-abbrlink/issues/19">https://github.com/rozbo/hexo-abbrlink/issues/19</a></span><a href="#fnref:2" rev="footnote"> ↩</a></li></ol></div></div>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/32378.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/32378.html" class="post-title-link" itemprop="url">sublime text</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-06-04 22:00:00 / 修改时间：22:32:49" itemprop="dateCreated datePublished" datetime="2021-06-04T22:00:00+08:00">2021-06-04</time>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>651</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>使用技巧<br>多行编辑<code>control</code>+<code>shift</code>+<code>方向键</code><br>分屏<code>command</code>+<code>option</code>+<code>2</code><br>括弧跳转<code>control</code>+<code>m</code></p>
+<p>配置python环境<br>win7下python最高版本为python-3.8.10<br>安装Python后，进入<code>C:\Users\jxswcy\AppData\Roaming\Sublime Text 3\Packages\User</code>，加入<code>Python3.sublime-build</code>，内容如下</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"><span class="attr">&quot;env&quot;</span>: &#123;<span class="attr">&quot;PYTHONIOENCODING&quot;</span>: <span class="string">&quot;utf8&quot;</span>&#125;,</span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;cmd&quot;</span>: [<span class="string">&quot;C:/Users/jxswcy/AppData/Local/Programs/Python/Python38/python.exe&quot;</span>,<span class="string">&quot;-u&quot;</span>,<span class="string">&quot;$file&quot;</span>],</span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;file_regex&quot;</span>: <span class="string">&quot;^[ ]*File \&quot;(...*?)\&quot;, line ([0-9]*)&quot;</span>,</span><br><span class="line"></span><br><span class="line"><span class="attr">&quot;selector&quot;</span>: <span class="string">&quot;source.python&quot;</span>,</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上注意修改用户名路径<br>tools-bulid system 选择python3<br>注意，python文件需保存，否则会报错<code>can&#39;t find &#39;__main__&#39; module in &#39;&#39;</code></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/10382.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/10382.html" class="post-title-link" itemprop="url">sqli labs weiteup</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-18 13:49:44" itemprop="dateCreated datePublished" datetime="2021-05-18T13:49:44+08:00">2021-05-18</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-05 11:54:19" itemprop="dateModified" datetime="2021-06-05T11:54:19+08:00">2021-06-05</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>50k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>45 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          我有一个小秘密
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/10382.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/54206.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/54206.html" class="post-title-link" itemprop="url">web工具-Auto Tor</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-14 23:29:04" itemprop="dateCreated datePublished" datetime="2021-05-14T23:29:04+08:00">2021-05-14</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-04 22:32:49" itemprop="dateModified" datetime="2021-06-04T22:32:49+08:00">2021-06-04</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>262</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>联动AWVS进行扫描，可自动切换ip</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">apt-get update -y &amp;&amp; apt-get upgrade -y &amp;&amp; apt-get install tor privoxy python3 python3-pip -y &amp;&amp; python3 -m pip install PySocks</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/FDX100/Auto_Tor_IP_changer.git</span><br><span class="line"><span class="built_in">cd</span> Auto_Tor_IP_changer</span><br><span class="line">python3 install.py</span><br><span class="line">aut</span><br></pre></td></tr></table></figure>
+<p><img src="/54206/1.png"><br>进入AWVS设置代理</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/4216.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/4216.html" class="post-title-link" itemprop="url">Desktop</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-05-03 00:17:54" itemprop="dateCreated datePublished" datetime="2021-05-03T00:17:54+08:00">2021-05-03</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-06-04 22:32:49" itemprop="dateModified" datetime="2021-06-04T22:32:49+08:00">2021-06-04</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>280</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>保持整洁桌面，提高工作效率！</p>
+<h1 id="升降桌"><a href="#升降桌" class="headerlink" title="升降桌"></a>升降桌</h1><p>可以淘宝找木小北<br>办公室可以使用<a target="_blank" rel="noopener" href="https://www.ergotron.com/zh-cn/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF/33-406#?%E9%A2%9C%E8%89%B2=%E9%BB%91%E8%89%B2">爱格升WorkFit-TL</a>搭配上<a target="_blank" rel="noopener" href="https://www.ergotron.com/zh-cn/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF/97-935">WorkFit 单 LD 显示器套件</a>，双屏可以上<a target="_blank" rel="noopener" href="https://www.ergotron.com/zh-cn/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF/97-934">WorkFit 双显示器套件</a></p>
+<h1 id="升降支架"><a href="#升降支架" class="headerlink" title="升降支架"></a>升降支架</h1><h2 id="爱格升"><a href="#爱格升" class="headerlink" title="爱格升"></a>爱格升</h2><p><a target="_blank" rel="noopener" href="https://www.ergotron.com/zh-cn/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF/45-241#?%E9%A2%9C%E8%89%B2=%E9%93%9D">爱格升LX 台式 LCD 支臂</a><br><a target="_blank" rel="noopener" href="https://www.ergotron.com/zh-cn/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF/45-245#?%E9%A2%9C%E8%89%B2=%E9%93%9D">爱格升LX 双配置并列型支臂</a><br><a target="_blank" rel="noopener" href="https://www.ergotron.com/zh-cn/%E4%BA%A7%E5%93%81/%E4%BA%A7%E5%93%81%E8%AF%A6%E7%BB%86%E4%BF%A1%E6%81%AF/50-193">爱格升LX笔记本电脑托架</a></p>
+<h2 id="HermanMiller"><a href="#HermanMiller" class="headerlink" title="HermanMiller"></a>HermanMiller</h2><p><a target="_blank" rel="noopener" href="https://www.hermanmiller.com/zh_cn/products/accessories/technology-support/flo/">HermanMiller Flo</a><br><a target="_blank" rel="noopener" href="https://www.hermanmiller.com/zh_cn/products/accessories/technology-support/flo-dual/">HermanMiller Flo Dual</a><br><a target="_blank" rel="noopener" href="https://www.hermanmiller.com/zh_cn/products/accessories/technology-support/laptop-mount/">HermanMiller Laptop Mount</a></p>
+<h1 id="鼠键"><a href="#鼠键" class="headerlink" title="鼠键"></a>鼠键</h1><p>首选无线<br><a target="_blank" rel="noopener" href="https://www.logitech.com.cn/zh-cn/products/mice/mx-master-3.910-005704.html">MX Master 3</a>+<a target="_blank" rel="noopener" href="https://www.logitech.com.cn/zh-cn/products/keyboards/mx-keys-wireless-keyboard.920-009422.html">MX Keys</a><br>喜欢机械键盘可以考虑ikbc w2 + ikbc w210</p>
+<h1 id="电源"><a href="#电源" class="headerlink" title="电源"></a>电源</h1><p>魔方插座<a target="_blank" rel="noopener" href="https://item.jd.com/100014892506.html">有线</a>+<a target="_blank" rel="noopener" href="https://item.jd.com/100014209940.html">无线</a>，双面胶粘桌底。</p>
+<h1 id="对拷线"><a href="#对拷线" class="headerlink" title="对拷线"></a>对拷线</h1><p><a target="_blank" rel="noopener" href="https://item.jd.com/35155373014.html">绿联对拷线</a>，方便内外网互传文件。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/25913.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/25913.html" class="post-title-link" itemprop="url">hashcat 使用手册</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-28 11:26:57" itemprop="dateCreated datePublished" datetime="2021-04-28T11:26:57+08:00">2021-04-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-02 23:35:09" itemprop="dateModified" datetime="2021-05-02T23:35:09+08:00">2021-05-02</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>20k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>18 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><a target="_blank" rel="noopener" href="https://hashcat.net/hashcat/">官方网站</a></p>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install hashcat</span><br></pre></td></tr></table></figure>
+<h1 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h1><h2 id="m"><a href="#m" class="headerlink" title="-m"></a>-m</h2><p>破解hash类型</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br></pre></td><td class="code"><pre><span class="line">- [ Hash modes ] -</span><br><span class="line"></span><br><span class="line">      # | <span class="type">Name</span>                                             | <span class="type">Category</span></span><br><span class="line">  ======+==================================================+======================================</span><br><span class="line">    <span class="number">900</span> | <span class="type">MD4</span>                                              | <span class="type">Raw</span> Hash</span><br><span class="line">      <span class="number">0</span> | <span class="type">MD5</span>                                              | <span class="type">Raw</span> Hash</span><br><span class="line">   <span class="number">5100</span> | <span class="type">Half</span> MD5                                         | <span class="type">Raw</span> Hash</span><br><span class="line">    <span class="number">100</span> | <span class="type">SHA1</span>                                             | <span class="type">Raw</span> Hash</span><br><span class="line">   <span class="number">1300</span> | <span class="type">SHA2</span><span class="number">-224</span>                                         | <span class="type">Raw</span> Hash</span><br><span class="line">   <span class="number">1400</span> | <span class="type">SHA2</span><span class="number">-256</span>                                         | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">10800</span> | <span class="type">SHA2</span><span class="number">-384</span>                                         | <span class="type">Raw</span> Hash</span><br><span class="line">   <span class="number">1700</span> | <span class="type">SHA2</span><span class="number">-512</span>                                         | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">17300</span> | <span class="type">SHA3</span><span class="number">-224</span>                                         | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">17400</span> | <span class="type">SHA3</span><span class="number">-256</span>                                         | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">17500</span> | <span class="type">SHA3</span><span class="number">-384</span>                                         | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">17600</span> | <span class="type">SHA3</span><span class="number">-512</span>                                         | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">17700</span> | <span class="type">Keccak</span><span class="number">-224</span>                                       | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">17800</span> | <span class="type">Keccak</span><span class="number">-256</span>                                       | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">17900</span> | <span class="type">Keccak</span><span class="number">-384</span>                                       | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">18000</span> | <span class="type">Keccak</span><span class="number">-512</span>                                       | <span class="type">Raw</span> Hash</span><br><span class="line">    <span class="number">600</span> | <span class="type">BLAKE2b</span><span class="number">-512</span>                                      | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">10100</span> | <span class="type">SipHash</span>                                          | <span class="type">Raw</span> Hash</span><br><span class="line">   <span class="number">6000</span> | <span class="type">RIPEMD</span><span class="number">-160</span>                                       | <span class="type">Raw</span> Hash</span><br><span class="line">   <span class="number">6100</span> | <span class="type">Whirlpool</span>                                        | <span class="type">Raw</span> Hash</span><br><span class="line">   <span class="number">6900</span> | <span class="type">GOST</span> R <span class="number">34.11</span><span class="number">-94</span>                                  | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">11700</span> | <span class="type">GOST</span> R <span class="number">34.11</span><span class="number">-2012</span> (Streebog) <span class="number">256</span>-bit, big-endian | <span class="type">Raw</span> Hash</span><br><span class="line">  <span class="number">11800</span> | <span class="type">GOST</span> R <span class="number">34.11</span><span class="number">-2012</span> (Streebog) <span class="number">512</span>-bit, big-endian | <span class="type">Raw</span> Hash</span><br><span class="line">     <span class="number">10</span> | <span class="type">md5</span>($pass.$salt)                                 | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">     <span class="number">20</span> | <span class="type">md5</span>($salt.$pass)                                 | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">     <span class="number">30</span> | <span class="type">md5</span>(utf16le($pass).$salt)                        | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">     <span class="number">40</span> | <span class="type">md5</span>($salt.utf16le($pass))                        | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">3800</span> | <span class="type">md5</span>($salt.$pass.$salt)                           | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">3710</span> | <span class="type">md5</span>($salt.md5($pass))                            | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">4010</span> | <span class="type">md5</span>($salt.md5($salt.$pass))                      | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">4110</span> | <span class="type">md5</span>($salt.md5($pass.$salt))                      | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">2600</span> | <span class="type">md5</span>(md5($pass))                                  | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">3910</span> | <span class="type">md5</span>(md5($pass).md5($salt))                       | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">4300</span> | <span class="type">md5</span>(strtoupper(md5($pass)))                      | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">4400</span> | <span class="type">md5</span>(sha1($pass))                                 | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">    <span class="number">110</span> | <span class="type">sha1</span>($pass.$salt)                                | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">    <span class="number">120</span> | <span class="type">sha1</span>($salt.$pass)                                | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">    <span class="number">130</span> | <span class="type">sha1</span>(utf16le($pass).$salt)                       | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">    <span class="number">140</span> | <span class="type">sha1</span>($salt.utf16le($pass))                       | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">4500</span> | <span class="type">sha1</span>(sha1($pass))                                | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">4520</span> | <span class="type">sha1</span>($salt.sha1($pass))                          | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">4700</span> | <span class="type">sha1</span>(md5($pass))                                 | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">4900</span> | <span class="type">sha1</span>($salt.$pass.$salt)                          | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">  <span class="number">14400</span> | <span class="type">sha1</span>(CX)                                         | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">1410</span> | <span class="type">sha256</span>($pass.$salt)                              | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">1420</span> | <span class="type">sha256</span>($salt.$pass)                              | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">1430</span> | <span class="type">sha256</span>(utf16le($pass).$salt)                     | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">1440</span> | <span class="type">sha256</span>($salt.utf16le($pass))                     | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">1710</span> | <span class="type">sha512</span>($pass.$salt)                              | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">1720</span> | <span class="type">sha512</span>($salt.$pass)                              | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">1730</span> | <span class="type">sha512</span>(utf16le($pass).$salt)                     | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">   <span class="number">1740</span> | <span class="type">sha512</span>($salt.utf16le($pass))                     | <span class="type">Raw</span> Hash, Salted and/or Iterated</span><br><span class="line">     <span class="number">50</span> | <span class="type">HMAC</span>-MD5 (key = $pass)                           | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">     <span class="number">60</span> | <span class="type">HMAC</span>-MD5 (key = $salt)                           | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">    <span class="number">150</span> | <span class="type">HMAC</span>-SHA1 (key = $pass)                          | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">    <span class="number">160</span> | <span class="type">HMAC</span>-SHA1 (key = $salt)                          | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">   <span class="number">1450</span> | <span class="type">HMAC</span>-SHA256 (key = $pass)                        | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">   <span class="number">1460</span> | <span class="type">HMAC</span>-SHA256 (key = $salt)                        | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">   <span class="number">1750</span> | <span class="type">HMAC</span>-SHA512 (key = $pass)                        | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">   <span class="number">1760</span> | <span class="type">HMAC</span>-SHA512 (key = $salt)                        | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">  <span class="number">11750</span> | <span class="type">HMAC</span>-Streebog<span class="number">-256</span> (key = $pass), big-endian      | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">  <span class="number">11760</span> | <span class="type">HMAC</span>-Streebog<span class="number">-256</span> (key = $salt), big-endian      | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">  <span class="number">11850</span> | <span class="type">HMAC</span>-Streebog<span class="number">-512</span> (key = $pass), big-endian      | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">  <span class="number">11860</span> | <span class="type">HMAC</span>-Streebog<span class="number">-512</span> (key = $salt), big-endian      | <span class="type">Raw</span> Hash, Authenticated</span><br><span class="line">  <span class="number">14000</span> | <span class="type">DES</span> (PT = $salt, key = $pass)                    | <span class="type">Raw</span> Cipher, Known-Plaintext attack</span><br><span class="line">  <span class="number">14100</span> | <span class="type">3DES</span> (PT = $salt, key = $pass)                   | <span class="type">Raw</span> Cipher, Known-Plaintext attack</span><br><span class="line">  <span class="number">14900</span> | <span class="type">Skip32</span> (PT = $salt, key = $pass)                 | <span class="type">Raw</span> Cipher, Known-Plaintext attack</span><br><span class="line">  <span class="number">15400</span> | <span class="type">ChaCha20</span>                                         | <span class="type">Raw</span> Cipher, Known-Plaintext attack</span><br><span class="line">    <span class="number">400</span> | <span class="type">phpass</span>                                           | <span class="type">Generic</span> KDF</span><br><span class="line">   <span class="number">8900</span> | <span class="type">scrypt</span>                                           | <span class="type">Generic</span> KDF</span><br><span class="line">  <span class="number">11900</span> | <span class="type">PBKDF2</span>-HMAC-MD5                                  | <span class="type">Generic</span> KDF</span><br><span class="line">  <span class="number">12000</span> | <span class="type">PBKDF2</span>-HMAC-SHA1                                 | <span class="type">Generic</span> KDF</span><br><span class="line">  <span class="number">10900</span> | <span class="type">PBKDF2</span>-HMAC-SHA256                               | <span class="type">Generic</span> KDF</span><br><span class="line">  <span class="number">12100</span> | <span class="type">PBKDF2</span>-HMAC-SHA512                               | <span class="type">Generic</span> KDF</span><br><span class="line">     <span class="number">23</span> | <span class="type">Skype</span>                                            | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">2500</span> | <span class="type">WPA</span>-EAPOL-PBKDF2                                 | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">2501</span> | <span class="type">WPA</span>-EAPOL-PMK                                    | <span class="type">Network</span> Protocols</span><br><span class="line">  <span class="number">16800</span> | <span class="type">WPA</span>-PMKID-PBKDF2                                 | <span class="type">Network</span> Protocols</span><br><span class="line">  <span class="number">16801</span> | <span class="type">WPA</span>-PMKID-PMK                                    | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">4800</span> | <span class="type">iSCSI</span> CHAP authentication, MD5(CHAP)             | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">5300</span> | <span class="type">IKE</span>-PSK MD5                                      | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">5400</span> | <span class="type">IKE</span>-PSK SHA1                                     | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">5500</span> | <span class="type">NetNTLMv1</span>                                        | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">5500</span> | <span class="type">NetNTLMv1</span>+ESS                                    | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">5600</span> | <span class="type">NetNTLMv2</span>                                        | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">7300</span> | <span class="type">IPMI2</span> RAKP HMAC-SHA1                             | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">7500</span> | <span class="type">Kerberos</span> <span class="number">5</span> AS-REQ Pre-Auth etype <span class="number">23</span>              | <span class="type">Network</span> Protocols</span><br><span class="line">   <span class="number">8300</span> | <span class="type">DNSSEC</span> (NSEC3)                                   | <span class="type">Network</span> Protocols</span><br><span class="line">  <span class="number">10200</span> | <span class="type">CRAM</span>-MD5                                         | <span class="type">Network</span> Protocols</span><br><span class="line">  <span class="number">11100</span> | <span class="type">PostgreSQL</span> CRAM (MD5)                            | <span class="type">Network</span> Protocols</span><br><span class="line">  <span class="number">11200</span> | <span class="type">MySQL</span> CRAM (SHA1)                                | <span class="type">Network</span> Protocols</span><br><span class="line">  <span class="number">11400</span> | <span class="type">SIP</span> digest authentication (MD5)                  | <span class="type">Network</span> Protocols</span><br><span class="line">  <span class="number">13100</span> | <span class="type">Kerberos</span> <span class="number">5</span> TGS-REP etype <span class="number">23</span>                      | <span class="type">Network</span> Protocols</span><br><span class="line">  <span class="number">16100</span> | <span class="type">TACACS</span>+                                          | <span class="type">Network</span> Protocols</span><br><span class="line">  <span class="number">16500</span> | <span class="type">JWT</span> (JSON Web Token)                             | <span class="type">Network</span> Protocols</span><br><span class="line">  <span class="number">18200</span> | <span class="type">Kerberos</span> <span class="number">5</span> AS-REP etype <span class="number">23</span>                       | <span class="type">Network</span> Protocols</span><br><span class="line">    <span class="number">121</span> | <span class="type">SMF</span> (Simple Machines Forum) &gt; v1<span class="number">.1</span>               | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">    <span class="number">400</span> | <span class="type">phpBB3</span> (MD5)                                     | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">   <span class="number">2611</span> | <span class="type">vBulletin</span> &lt; v3<span class="number">.8</span><span class="number">.5</span>                               | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">   <span class="number">2711</span> | <span class="type">vBulletin</span> &gt;= v3<span class="number">.8</span><span class="number">.5</span>                              | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">   <span class="number">2811</span> | <span class="type">MyBB</span> <span class="number">1.2</span>+                                        | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">   <span class="number">2811</span> | <span class="type">IPB2</span>+ (Invision Power Board)                     | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">   <span class="number">8400</span> | <span class="type">WBB3</span> (Woltlab Burning Board)                     | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">     <span class="number">11</span> | <span class="type">Joomla</span> &lt; <span class="number">2.5</span><span class="number">.18</span>                                  | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">    <span class="number">400</span> | <span class="type">Joomla</span> &gt;= <span class="number">2.5</span><span class="number">.18</span> (MD5)                           | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">    <span class="number">400</span> | <span class="type">WordPress</span> (MD5)                                  | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">   <span class="number">2612</span> | <span class="type">PHPS</span>                                             | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">   <span class="number">7900</span> | <span class="type">Drupal7</span>                                          | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">     <span class="number">21</span> | <span class="type">osCommerce</span>                                       | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">     <span class="number">21</span> | <span class="type">xt</span>:Commerce                                      | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">  <span class="number">11000</span> | <span class="type">PrestaShop</span>                                       | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">    <span class="number">124</span> | <span class="type">Django</span> (SHA<span class="number">-1</span>)                                   | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">  <span class="number">10000</span> | <span class="type">Django</span> (PBKDF2-SHA256)                           | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">  <span class="number">16000</span> | <span class="type">Tripcode</span>                                         | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">   <span class="number">3711</span> | <span class="type">MediaWiki</span> B type                                 | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">  <span class="number">13900</span> | <span class="type">OpenCart</span>                                         | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">   <span class="number">4521</span> | <span class="type">Redmine</span>                                          | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">   <span class="number">4522</span> | <span class="type">PunBB</span>                                            | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">  <span class="number">12001</span> | <span class="type">Atlassian</span> (PBKDF2-HMAC-SHA1)                     | <span class="type">Forums</span>, CMS, E-Commerce, Frameworks</span><br><span class="line">     <span class="number">12</span> | <span class="type">PostgreSQL</span>                                       | <span class="type">Database</span> Server</span><br><span class="line">    <span class="number">131</span> | <span class="type">MSSQL</span> (<span class="number">2000</span>)                                     | <span class="type">Database</span> Server</span><br><span class="line">    <span class="number">132</span> | <span class="type">MSSQL</span> (<span class="number">2005</span>)                                     | <span class="type">Database</span> Server</span><br><span class="line">   <span class="number">1731</span> | <span class="type">MSSQL</span> (<span class="number">2012</span>, <span class="number">2014</span>)                               | <span class="type">Database</span> Server</span><br><span class="line">    <span class="number">200</span> | <span class="type">MySQL323</span>                                         | <span class="type">Database</span> Server</span><br><span class="line">    <span class="number">300</span> | <span class="type">MySQL4</span><span class="number">.1</span>/MySQL5                                  | <span class="type">Database</span> Server</span><br><span class="line">   <span class="number">3100</span> | <span class="type">Oracle</span> H: <span class="keyword">Type</span> (Oracle <span class="number">7</span>+)                       | <span class="type">Database</span> Server</span><br><span class="line">    <span class="number">112</span> | <span class="type">Oracle</span> S: <span class="keyword">Type</span> (Oracle <span class="number">11</span>+)                      | <span class="type">Database</span> Server</span><br><span class="line">  <span class="number">12300</span> | <span class="type">Oracle</span> T: <span class="keyword">Type</span> (Oracle <span class="number">12</span>+)                      | <span class="type">Database</span> Server</span><br><span class="line">   <span class="number">8000</span> | <span class="type">Sybase</span> ASE                                       | <span class="type">Database</span> Server</span><br><span class="line">    <span class="number">141</span> | <span class="type">Episerver</span> <span class="number">6.</span>x &lt; .NET <span class="number">4</span>                           | <span class="type">HTTP</span>, SMTP, LDAP Server</span><br><span class="line">   <span class="number">1441</span> | <span class="type">Episerver</span> <span class="number">6.</span>x &gt;= .NET <span class="number">4</span>                          | <span class="type">HTTP</span>, SMTP, LDAP Server</span><br><span class="line">   <span class="number">1600</span> | <span class="type">Apache</span> $apr1$ MD5, md5apr1, MD5 (APR)            | <span class="type">HTTP</span>, SMTP, LDAP Server</span><br><span class="line">  <span class="number">12600</span> | <span class="type">ColdFusion</span> <span class="number">10</span>+                                   | <span class="type">HTTP</span>, SMTP, LDAP Server</span><br><span class="line">   <span class="number">1421</span> | <span class="type">hMailServer</span>                                      | <span class="type">HTTP</span>, SMTP, LDAP Server</span><br><span class="line">    <span class="number">101</span> | <span class="type">nsldap</span>, SHA<span class="number">-1</span>(Base64), Netscape LDAP SHA         | <span class="type">HTTP</span>, SMTP, LDAP Server</span><br><span class="line">    <span class="number">111</span> | <span class="type">nsldaps</span>, SSHA<span class="number">-1</span>(Base64), Netscape LDAP SSHA      | <span class="type">HTTP</span>, SMTP, LDAP Server</span><br><span class="line">   <span class="number">1411</span> | <span class="type">SSHA</span><span class="number">-256</span>(Base64), LDAP &#123;SSHA256&#125;                 | <span class="type">HTTP</span>, SMTP, LDAP Server</span><br><span class="line">   <span class="number">1711</span> | <span class="type">SSHA</span><span class="number">-512</span>(Base64), LDAP &#123;SSHA512&#125;                 | <span class="type">HTTP</span>, SMTP, LDAP Server</span><br><span class="line">  <span class="number">16400</span> | <span class="type">CRAM</span>-MD5 Dovecot                                 | <span class="type">HTTP</span>, SMTP, LDAP Server</span><br><span class="line">  <span class="number">15000</span> | <span class="type">FileZilla</span> Server &gt;= <span class="number">0.9</span><span class="number">.55</span>                       | <span class="type">FTP</span> Server</span><br><span class="line">  <span class="number">11500</span> | <span class="type">CRC32</span>                                            | <span class="type">Checksums</span></span><br><span class="line">   <span class="number">3000</span> | <span class="type">LM</span>                                               | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">1000</span> | <span class="type">NTLM</span>                                             | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">1100</span> | <span class="type">Domain</span> Cached Credentials (DCC), MS Cache        | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">2100</span> | <span class="type">Domain</span> Cached Credentials <span class="number">2</span> (DCC2), MS Cache <span class="number">2</span>   | <span class="type">Operating</span> Systems</span><br><span class="line">  <span class="number">15300</span> | <span class="type">DPAPI</span> masterkey file v1                          | <span class="type">Operating</span> Systems</span><br><span class="line">  <span class="number">15900</span> | <span class="type">DPAPI</span> masterkey file v2                          | <span class="type">Operating</span> Systems</span><br><span class="line">  <span class="number">12800</span> | <span class="type">MS</span>-AzureSync  PBKDF2-HMAC-SHA256                 | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">1500</span> | <span class="type">descrypt</span>, DES (Unix), Traditional DES            | <span class="type">Operating</span> Systems</span><br><span class="line">  <span class="number">12400</span> | <span class="type">BSDi</span> Crypt, Extended DES                         | <span class="type">Operating</span> Systems</span><br><span class="line">    <span class="number">500</span> | <span class="type">md5crypt</span>, MD5 (Unix), Cisco-IOS $<span class="number">1</span>$ (MD5)        | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">3200</span> | <span class="type">bcrypt</span> $<span class="number">2</span>*$, Blowfish (Unix)                     | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">7400</span> | <span class="type">sha256crypt</span> $<span class="number">5</span>$, SHA256 (Unix)                   | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">1800</span> | <span class="type">sha512crypt</span> $<span class="number">6</span>$, SHA512 (Unix)                   | <span class="type">Operating</span> Systems</span><br><span class="line">    <span class="number">122</span> | <span class="type">macOS</span> v10<span class="number">.4</span>, MacOS v10<span class="number">.5</span>, MacOS v10<span class="number">.6</span>            | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">1722</span> | <span class="type">macOS</span> v10<span class="number">.7</span>                                      | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">7100</span> | <span class="type">macOS</span> v10<span class="number">.8</span>+ (PBKDF2-SHA512)                     | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">6300</span> | <span class="type">AIX</span> &#123;smd5&#125;                                       | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">6700</span> | <span class="type">AIX</span> &#123;ssha1&#125;                                      | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">6400</span> | <span class="type">AIX</span> &#123;ssha256&#125;                                    | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">6500</span> | <span class="type">AIX</span> &#123;ssha512&#125;                                    | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">2400</span> | <span class="type">Cisco</span>-PIX MD5                                    | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">2410</span> | <span class="type">Cisco</span>-ASA MD5                                    | <span class="type">Operating</span> Systems</span><br><span class="line">    <span class="number">500</span> | <span class="type">Cisco</span>-IOS $<span class="number">1</span>$ (MD5)                              | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">5700</span> | <span class="type">Cisco</span>-IOS type <span class="number">4</span> (SHA256)                        | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">9200</span> | <span class="type">Cisco</span>-IOS $<span class="number">8</span>$ (PBKDF2-SHA256)                    | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">9300</span> | <span class="type">Cisco</span>-IOS $<span class="number">9</span>$ (scrypt)                           | <span class="type">Operating</span> Systems</span><br><span class="line">     <span class="number">22</span> | <span class="type">Juniper</span> NetScreen/SSG (ScreenOS)                 | <span class="type">Operating</span> Systems</span><br><span class="line">    <span class="number">501</span> | <span class="type">Juniper</span> IVE                                      | <span class="type">Operating</span> Systems</span><br><span class="line">  <span class="number">15100</span> | <span class="type">Juniper</span>/NetBSD sha1crypt                         | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">7000</span> | <span class="type">FortiGate</span> (FortiOS)                              | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">5800</span> | <span class="type">Samsung</span> Android Password/PIN                     | <span class="type">Operating</span> Systems</span><br><span class="line">  <span class="number">13800</span> | <span class="type">Windows</span> Phone <span class="number">8</span>+ PIN/password                    | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">8100</span> | <span class="type">Citrix</span> NetScaler                                 | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">8500</span> | <span class="type">RACF</span>                                             | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">7200</span> | <span class="type">GRUB</span> <span class="number">2</span>                                           | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">9900</span> | <span class="type">Radmin2</span>                                          | <span class="type">Operating</span> Systems</span><br><span class="line">    <span class="number">125</span> | <span class="type">ArubaOS</span>                                          | <span class="type">Operating</span> Systems</span><br><span class="line">   <span class="number">7700</span> | <span class="type">SAP</span> CODVN B (BCODE)                              | <span class="type">Enterprise</span> Application Software (EAS)</span><br><span class="line">   <span class="number">7701</span> | <span class="type">SAP</span> CODVN B (BCODE) via RFC_READ_TABLE           | <span class="type">Enterprise</span> Application Software (EAS)</span><br><span class="line">   <span class="number">7800</span> | <span class="type">SAP</span> CODVN F/G (PASSCODE)                         | <span class="type">Enterprise</span> Application Software (EAS)</span><br><span class="line">   <span class="number">7801</span> | <span class="type">SAP</span> CODVN F/G (PASSCODE) via RFC_READ_TABLE      | <span class="type">Enterprise</span> Application Software (EAS)</span><br><span class="line">  <span class="number">10300</span> | <span class="type">SAP</span> CODVN H (PWDSALTEDHASH) iSSHA<span class="number">-1</span>              | <span class="type">Enterprise</span> Application Software (EAS)</span><br><span class="line">   <span class="number">8600</span> | <span class="type">Lotus</span> Notes/Domino <span class="number">5</span>                             | <span class="type">Enterprise</span> Application Software (EAS)</span><br><span class="line">   <span class="number">8700</span> | <span class="type">Lotus</span> Notes/Domino <span class="number">6</span>                             | <span class="type">Enterprise</span> Application Software (EAS)</span><br><span class="line">   <span class="number">9100</span> | <span class="type">Lotus</span> Notes/Domino <span class="number">8</span>                             | <span class="type">Enterprise</span> Application Software (EAS)</span><br><span class="line">    <span class="number">133</span> | <span class="type">PeopleSoft</span>                                       | <span class="type">Enterprise</span> Application Software (EAS)</span><br><span class="line">  <span class="number">13500</span> | <span class="type">PeopleSoft</span> PS_TOKEN                              | <span class="type">Enterprise</span> Application Software (EAS)</span><br><span class="line">  <span class="number">11600</span> | <span class="type">7</span>-Zip                                            | <span class="type">Archives</span></span><br><span class="line">  <span class="number">12500</span> | <span class="type">RAR3</span>-hp                                          | <span class="type">Archives</span></span><br><span class="line">  <span class="number">13000</span> | <span class="type">RAR5</span>                                             | <span class="type">Archives</span></span><br><span class="line">  <span class="number">13200</span> | <span class="type">AxCrypt</span>                                          | <span class="type">Archives</span></span><br><span class="line">  <span class="number">13300</span> | <span class="type">AxCrypt</span> <span class="built_in">in</span>-memory SHA1                           | <span class="type">Archives</span></span><br><span class="line">  <span class="number">13600</span> | <span class="type">WinZip</span>                                           | <span class="type">Archives</span></span><br><span class="line">  <span class="number">14700</span> | <span class="type">iTunes</span> backup &lt; <span class="number">10.0</span>                             | <span class="type">Backup</span></span><br><span class="line">  <span class="number">14800</span> | <span class="type">iTunes</span> backup &gt;= <span class="number">10.0</span>                            | <span class="type">Backup</span></span><br><span class="line">   <span class="number">62</span>XY | <span class="type">TrueCrypt</span>                                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">1</span> = PBKDF2-HMAC-RIPEMD160                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">2</span> = PBKDF2-HMAC-SHA512                           | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">3</span> = PBKDF2-HMAC-Whirlpool                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">4</span> = PBKDF2-HMAC-RIPEMD160 + boot-mode            | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">1</span> = XTS  <span class="number">512</span> bit pure AES                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">1</span> = XTS  <span class="number">512</span> bit pure Serpent                    | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">1</span> = XTS  <span class="number">512</span> bit pure Twofish                    | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit pure AES                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit pure Serpent                    | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit pure Twofish                    | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit cascaded AES-Twofish            | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit cascaded Serpent-AES            | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit cascaded Twofish-Serpent        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">3</span> = XTS <span class="number">1536</span> bit all                             | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">   <span class="number">8800</span> | <span class="type">Android</span> FDE &lt;= <span class="number">4.3</span>                               | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">  <span class="number">12900</span> | <span class="type">Android</span> FDE (Samsung DEK)                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">  <span class="number">12200</span> | <span class="type">eCryptfs</span>                                         | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">  <span class="number">137</span>XY | <span class="type">VeraCrypt</span>                                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">1</span> = PBKDF2-HMAC-RIPEMD160                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">2</span> = PBKDF2-HMAC-SHA512                           | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">3</span> = PBKDF2-HMAC-Whirlpool                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">4</span> = PBKDF2-HMAC-RIPEMD160 + boot-mode            | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">5</span> = PBKDF2-HMAC-SHA256                           | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">6</span> = PBKDF2-HMAC-SHA256 + boot-mode               | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">     X  | <span class="type">7</span> = PBKDF2-HMAC-Streebog<span class="number">-512</span>                     | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">1</span> = XTS  <span class="number">512</span> bit pure AES                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">1</span> = XTS  <span class="number">512</span> bit pure Serpent                    | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">1</span> = XTS  <span class="number">512</span> bit pure Twofish                    | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">1</span> = XTS  <span class="number">512</span> bit pure Camellia                   | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">1</span> = XTS  <span class="number">512</span> bit pure Kuznyechik                 | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit pure AES                        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit pure Serpent                    | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit pure Twofish                    | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit pure Camellia                   | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit pure Kuznyechik                 | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit cascaded AES-Twofish            | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit cascaded Camellia-Kuznyechik    | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit cascaded Camellia-Serpent       | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit cascaded Kuznyechik-AES         | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit cascaded Kuznyechik-Twofish     | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit cascaded Serpent-AES            | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">2</span> = XTS <span class="number">1024</span> bit cascaded Twofish-Serpent        | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">      Y | <span class="type">3</span> = XTS <span class="number">1536</span> bit all                             | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">  <span class="number">14600</span> | <span class="type">LUKS</span>                                             | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">  <span class="number">16700</span> | <span class="type">FileVault</span> <span class="number">2</span>                                      | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">  <span class="number">18300</span> | <span class="type">Apple</span> <span class="keyword">File</span> System (APFS)                         | <span class="type">Full</span>-Disk Encryption (FDE)</span><br><span class="line">   <span class="number">9700</span> | <span class="type">MS</span> Office &lt;= <span class="number">2003</span> $<span class="number">0</span>/$<span class="number">1</span>, MD5 + RC4               | <span class="type">Documents</span></span><br><span class="line">   <span class="number">9710</span> | <span class="type">MS</span> Office &lt;= <span class="number">2003</span> $<span class="number">0</span>/$<span class="number">1</span>, MD5 + RC4, collider #<span class="number">1</span>  | <span class="type">Documents</span></span><br><span class="line">   <span class="number">9720</span> | <span class="type">MS</span> Office &lt;= <span class="number">2003</span> $<span class="number">0</span>/$<span class="number">1</span>, MD5 + RC4, collider #<span class="number">2</span>  | <span class="type">Documents</span></span><br><span class="line">   <span class="number">9800</span> | <span class="type">MS</span> Office &lt;= <span class="number">2003</span> $<span class="number">3</span>/$<span class="number">4</span>, SHA1 + RC4              | <span class="type">Documents</span></span><br><span class="line">   <span class="number">9810</span> | <span class="type">MS</span> Office &lt;= <span class="number">2003</span> $<span class="number">3</span>, SHA1 + RC4, collider #<span class="number">1</span>    | <span class="type">Documents</span></span><br><span class="line">   <span class="number">9820</span> | <span class="type">MS</span> Office &lt;= <span class="number">2003</span> $<span class="number">3</span>, SHA1 + RC4, collider #<span class="number">2</span>    | <span class="type">Documents</span></span><br><span class="line">   <span class="number">9400</span> | <span class="type">MS</span> Office <span class="number">2007</span>                                   | <span class="type">Documents</span></span><br><span class="line">   <span class="number">9500</span> | <span class="type">MS</span> Office <span class="number">2010</span>                                   | <span class="type">Documents</span></span><br><span class="line">   <span class="number">9600</span> | <span class="type">MS</span> Office <span class="number">2013</span>                                   | <span class="type">Documents</span></span><br><span class="line">  <span class="number">10400</span> | <span class="type">PDF</span> <span class="number">1.1</span> - <span class="number">1.3</span> (Acrobat <span class="number">2</span> - <span class="number">4</span>)                    | <span class="type">Documents</span></span><br><span class="line">  <span class="number">10410</span> | <span class="type">PDF</span> <span class="number">1.1</span> - <span class="number">1.3</span> (Acrobat <span class="number">2</span> - <span class="number">4</span>), collider #<span class="number">1</span>       | <span class="type">Documents</span></span><br><span class="line">  <span class="number">10420</span> | <span class="type">PDF</span> <span class="number">1.1</span> - <span class="number">1.3</span> (Acrobat <span class="number">2</span> - <span class="number">4</span>), collider #<span class="number">2</span>       | <span class="type">Documents</span></span><br><span class="line">  <span class="number">10500</span> | <span class="type">PDF</span> <span class="number">1.4</span> - <span class="number">1.6</span> (Acrobat <span class="number">5</span> - <span class="number">8</span>)                    | <span class="type">Documents</span></span><br><span class="line">  <span class="number">10600</span> | <span class="type">PDF</span> <span class="number">1.7</span> Level <span class="number">3</span> (Acrobat <span class="number">9</span>)                      | <span class="type">Documents</span></span><br><span class="line">  <span class="number">10700</span> | <span class="type">PDF</span> <span class="number">1.7</span> Level <span class="number">8</span> (Acrobat <span class="number">10</span> - <span class="number">11</span>)                | <span class="type">Documents</span></span><br><span class="line">  <span class="number">16200</span> | <span class="type">Apple</span> Secure Notes                               | <span class="type">Documents</span></span><br><span class="line">   <span class="number">9000</span> | <span class="type">Password</span> Safe v2                                 | <span class="type">Password</span> Managers</span><br><span class="line">   <span class="number">5200</span> | <span class="type">Password</span> Safe v3                                 | <span class="type">Password</span> Managers</span><br><span class="line">   <span class="number">6800</span> | <span class="type">LastPass</span> + LastPass sniffed                      | <span class="type">Password</span> Managers</span><br><span class="line">   <span class="number">6600</span> | <span class="type">1Password</span>, agilekeychain                         | <span class="type">Password</span> Managers</span><br><span class="line">   <span class="number">8200</span> | <span class="type">1Password</span>, cloudkeychain                         | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">11300</span> | <span class="type">Bitcoin</span>/Litecoin wallet.dat                      | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">12700</span> | <span class="type">Blockchain</span>, My Wallet                            | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">15200</span> | <span class="type">Blockchain</span>, My Wallet, V2                        | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">16600</span> | <span class="type">Electrum</span> Wallet (Salt-<span class="keyword">Type</span> <span class="number">1</span><span class="number">-3</span>)                  | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">13400</span> | <span class="type">KeePass</span> <span class="number">1</span> (AES/Twofish) and KeePass <span class="number">2</span> (AES)      | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">15500</span> | <span class="type">JKS</span> Java Key Store Private Keys (SHA1)           | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">15600</span> | <span class="type">Ethereum</span> Wallet, PBKDF2-HMAC-SHA256              | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">15700</span> | <span class="type">Ethereum</span> Wallet, SCRYPT                          | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">16300</span> | <span class="type">Ethereum</span> Pre-Sale Wallet, PBKDF2-HMAC-SHA256     | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">16900</span> | <span class="type">Ansible</span> Vault                                    | <span class="type">Password</span> Managers</span><br><span class="line">  <span class="number">18100</span> | <span class="type">TOTP</span> (HMAC-SHA1)                                 | <span class="type">One</span>-<span class="keyword">Time</span> Passwords</span><br><span class="line">  <span class="number">99999</span> | <span class="type">Plaintext</span>                                        | <span class="type">Plaintext</span></span><br></pre></td></tr></table></figure>
+<h2 id="a"><a href="#a" class="headerlink" title="-a"></a>-a</h2><p>破解模式</p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">- [ Attack Modes ] -</span><br><span class="line"></span><br><span class="line">  <span class="comment"># | Mode</span></span><br><span class="line"> ===+======</span><br><span class="line"> <span class="number"> 0 </span>| Straight                <span class="comment"># 直接字典破解</span></span><br><span class="line"> <span class="number"> 1 </span>| Combination             <span class="comment"># 组合破解</span></span><br><span class="line"> <span class="number"> 3 </span>| Brute-force             <span class="comment"># 掩码暴力破解</span></span><br><span class="line"> <span class="number"> 6 </span>| Hybrid Wordlist + Mask  <span class="comment"># 字典+掩码破解</span></span><br><span class="line"> <span class="number"> 7 </span>| Hybrid Mask + Wordlist  <span class="comment"># 掩码+字典破解</span></span><br></pre></td></tr></table></figure>
+<h2 id="–increment"><a href="#–increment" class="headerlink" title="–increment"></a>–increment</h2><p>启用增量破解模式,让hashcat在指定的密码长度范围内执行破解</p>
+<h2 id="–increment-min"><a href="#–increment-min" class="headerlink" title="–increment-min"></a>–increment-min</h2><p>密码最小长度,后面直接等于一个整数即可,配置increment模式一起使用</p>
+<h2 id="–increment-max"><a href="#–increment-max" class="headerlink" title="–increment-max"></a>–increment-max</h2><p>密码最大长度,后面直接等于一个整数即可,配置increment模式一起使用</p>
+<h2 id="–force"><a href="#–force" class="headerlink" title="–force"></a>–force</h2><p>忽略破解过程中的警告信息</p>
+<h2 id="–remove"><a href="#–remove" class="headerlink" title="–remove"></a>–remove</h2><p>删除已被破解成功的hash</p>
+<h2 id="–username"><a href="#–username" class="headerlink" title="–username"></a>–username</h2><p>忽略hash文件中的指定的用户名,在破解linux系统用户密码hash会用到</p>
+<h2 id="–potfile-disable"><a href="#–potfile-disable" class="headerlink" title="–potfile-disable"></a>–potfile-disable</h2><p>不在potfile中记录破解成功的hash</p>
+<h2 id="I"><a href="#I" class="headerlink" title="-I"></a>-I</h2><p>–opencl-info显示有关检测到的OpenCL平台/设备的信息，如果有一块好的显卡的话破解速度会快很多。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">❯ hashcat -I</span><br><span class="line">hashcat (v6.1.1) starting...</span><br><span class="line"></span><br><span class="line">OpenCL Info:</span><br><span class="line">============</span><br><span class="line"></span><br><span class="line">OpenCL Platform ID <span class="comment">#1</span></span><br><span class="line">  Vendor..: Apple</span><br><span class="line">  Name....: Apple</span><br><span class="line">  Version.: OpenCL 1.2 (Feb 28 2021 03:51:16)</span><br><span class="line"></span><br><span class="line">  Backend Device ID <span class="comment">#1</span></span><br><span class="line">    Type...........: CPU</span><br><span class="line">    Vendor.ID......: 4</span><br><span class="line">    Vendor.........: Intel</span><br><span class="line">    Name...........: Intel(R) Core(TM) i9-9980HK CPU @ 2.40GHz</span><br><span class="line">    Version........: OpenCL 1.2</span><br><span class="line">    Processor(s)...: 16</span><br><span class="line">    Clock..........: 2400</span><br><span class="line">    Memory.Total...: 65536 MB (limited to 16384 MB allocatable <span class="keyword">in</span> one block)</span><br><span class="line">    Memory.Free....: 65472 MB</span><br><span class="line">    OpenCL.Version.: OpenCL C 1.2</span><br><span class="line">    Driver.Version.: 1.1</span><br><span class="line"></span><br><span class="line">  Backend Device ID <span class="comment">#2</span></span><br><span class="line">    Type...........: GPU</span><br><span class="line">    Vendor.ID......: 8</span><br><span class="line">    Vendor.........: Intel Inc.</span><br><span class="line">    Name...........: Intel(R) UHD Graphics 630</span><br><span class="line">    Version........: OpenCL 1.2</span><br><span class="line">    Processor(s)...: 24</span><br><span class="line">    Clock..........: 1250</span><br><span class="line">    Memory.Total...: 1536 MB (limited to 384 MB allocatable <span class="keyword">in</span> one block)</span><br><span class="line">    Memory.Free....: 1472 MB</span><br><span class="line">    OpenCL.Version.: OpenCL C 1.2</span><br><span class="line">    Driver.Version.: 1.2(Mar 12 2021 21:25:05)</span><br><span class="line"></span><br><span class="line">  Backend Device ID <span class="comment">#3</span></span><br><span class="line">    Type...........: GPU</span><br><span class="line">    Vendor.ID......: 1</span><br><span class="line">    Vendor.........: AMD</span><br><span class="line">    Name...........: AMD Radeon Pro 5600M Compute Engine</span><br><span class="line">    Version........: OpenCL 1.2</span><br><span class="line">    Processor(s)...: 40</span><br><span class="line">    Clock..........: 1144</span><br><span class="line">    Memory.Total...: 8176 MB (limited to 2044 MB allocatable <span class="keyword">in</span> one block)</span><br><span class="line">    Memory.Free....: 8112 MB</span><br><span class="line">    OpenCL.Version.: OpenCL C 1.2</span><br><span class="line">    Driver.Version.: 1.2 (Mar 12 2021 18:06:33)</span><br></pre></td></tr></table></figure>
+<h2 id="o"><a href="#o" class="headerlink" title="-o"></a>-o</h2><p>–outfile 指定破解成功后的hash及所对应的明文密码的存放位置</p>
+<h2 id="O"><a href="#O" class="headerlink" title="-O"></a>-O</h2><p>–optimized-kernel-enable 启用优化的内核（限制密码长度）</p>
+<h2 id="d"><a href="#d" class="headerlink" title="-d"></a>-d</h2><p>–opencl-devices指定opencl的设备，我这里支持的设备列表如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hashcat -a 3 -m 0 --force <span class="string">&#x27;cb7a53dd721f4ca90b8fd3dbdabeda5a&#x27;</span> <span class="string">&#x27;shaktictf&#123;?a?a?a?a?a&#125;&#x27;</span> -O</span><br></pre></td></tr></table></figure>
+<h2 id="D"><a href="#D" class="headerlink" title="-D"></a>-D</h2><p>–opencl-device-types指定opencl的设备类型，Hashcat支持如下设备类型：</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1 </span>| CPU</span><br><span class="line"><span class="symbol">2 </span>| GPU</span><br><span class="line"><span class="symbol">3 </span>| FPGA, DSP, Co-Processor</span><br></pre></td></tr></table></figure>
+<p>一般常用-D 2指定GPU破解</p>
+<h1 id="掩码破解"><a href="#掩码破解" class="headerlink" title="掩码破解"></a>掩码破解</h1><h2 id="掩码规则"><a href="#掩码规则" class="headerlink" title="掩码规则"></a>掩码规则</h2><figure class="highlight roboconf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">? | Charset</span><br><span class="line">===+=========</span><br><span class="line">l | abcdefghijklmnopqrstuvwxyz          <span class="comment"># 小写字母 a-z</span></span><br><span class="line">u | ABCDEFGHIJKLMNOPQRSTUVWXYZ          <span class="comment"># 大写字母 A-Z</span></span><br><span class="line">d | 0123456789                          <span class="comment"># 数字 0-9</span></span><br><span class="line">h | 0123456789abcdef                    <span class="comment"># 数字 + abcdef</span></span><br><span class="line">H | 0123456789ABCDEF                    <span class="comment"># 数字 + ABCDEF</span></span><br><span class="line">s |  !&quot;#$%&amp;&#x27;()*+,-./:;&lt;=&gt;?@[\]^_`&#123;|&#125;~   <span class="comment"># 特殊字符    </span></span><br><span class="line">a | ?l?u?d?s                            <span class="comment"># 键盘上所有可见的字符</span></span><br><span class="line">b | 0x00 - 0xff                         <span class="comment"># 可能是用来匹配像空格这种密码的</span></span><br></pre></td></tr></table></figure>
+<h2 id="自定义掩码规则"><a href="#自定义掩码规则" class="headerlink" title="自定义掩码规则"></a>自定义掩码规则</h2><figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--custom-charset1 [chars]等价于 -1</span></span><br><span class="line"><span class="comment">--custom-charset2 [chars]等价于 -2</span></span><br><span class="line"><span class="comment">--custom-charset3 [chars]等价于 -3</span></span><br><span class="line"><span class="comment">--custom-charset4 [chars]等价于 -4</span></span><br></pre></td></tr></table></figure>
+<h2 id="字典破解"><a href="#字典破解" class="headerlink" title="字典破解"></a>字典破解</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hashcat -a 0 -m 0 <span class="string">&#x27;5416d7cd6ef195a0f7622a9c56b55e84&#x27;</span> hashpass.txt -o success.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除已破解密码"><a href="#删除已破解密码" class="headerlink" title="删除已破解密码"></a>删除已破解密码</h2><p>有时候破解的时候会出现如下提示：</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">INFO</span>: <span class="keyword">All</span> hashes <span class="built_in">found</span> <span class="keyword">in</span> potfile! Use <span class="comment">--show to display them.</span></span><br></pre></td></tr></table></figure>
+<p>这表明在之前该密码已经被我们破解成功了，Hashcat故不再显示出来，可以在后面添加参数–show来显示密码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hashcat -a 0 -m 0 <span class="string">&#x27;cbc8f5435c87e13c5d14e6ce92358d68&#x27;</span> hashpass.txt --show</span><br><span class="line">cbc8f5435c87e13c5d14e6ce92358d68:123456@abc</span><br></pre></td></tr></table></figure>
+<p>Hashcat存放已经成功破解的密码文件位置为：<code>~/.hashcat/hashcat.potfile</code></p>
+<p>如果想要直接显示破解的密码的话，可以直接删除掉该文件。</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~<span class="regexp">/.hashcat/</span>hashcat.potfile</span><br></pre></td></tr></table></figure>
+
+<h1 id="破解案例"><a href="#破解案例" class="headerlink" title="破解案例"></a>破解案例</h1><h2 id="8位MD5加密的数字破解"><a href="#8位MD5加密的数字破解" class="headerlink" title="8位MD5加密的数字破解"></a>8位MD5加密的数字破解</h2><p>对23323323进行MD5加密：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> -n 23323323 |openssl md5</span><br><span class="line">5a745e31dbbd93f4c86d1ef82281688b</span><br></pre></td></tr></table></figure>
+<p>使用Hashcat来进行破解：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hashcat -a 3 -m 0 --force <span class="string">&#x27;5a745e31dbbd93f4c86d1ef82281688b&#x27;</span> <span class="string">&#x27;?d?d?d?d?d?d?d?d&#x27;</span> -O</span><br></pre></td></tr></table></figure>
+<p>8位MD5加密的大小写字母破解<br>Bash<br>$ echo -n PassWord |openssl md5<br>a9d402bfcde5792a8b531b3a82669585<br>使用Hashcat来进行破解：</p>
+<p>Bash<br>hashcat -a 3 -m 0 -1 ‘?l?u’ –force  ‘a9d402bfcde5792a8b531b3a82669585’ ‘?1?1?1?1?1?1?1?1’ -O<br>这里面定义了个自定义规则-1，此时?1就表示?l?u，即大小写字母。</p>
+<p>5-7位MD5加密的大小写字母+数字破解<br>Admin88的MD5值为d41e98d1eafa6d6011d3a70f1a5b92f0</p>
+<p>Bash<br>hashcat -a 3 -m 0 -1 ‘?l?u?d’ –force  ‘2792e40d60bac94b4b163b93566e65a9’ –increment –increment-min 5 –increment-max 7 ‘?1?1?1?1?1?1?1’ -O<br>这里面定义了个自定义规则-1，此时?1就表示?l?u?d，即大小写字母+数字。</p>
+<p>admin开头10位MD5加密的大小写字母+数字破解<br>admin23323的MD5值为a9991129897a44e0d1c2855c3d7dccc4</p>
+<p>Bash<br>hashcat -a 3 -m 0 -1 ‘?l?u?d’ –force  ‘a9991129897a44e0d1c2855c3d7dccc4’ ‘admin?1?1?1?1?1’ -O<br>MySQL4.1/MySQL5<br>查看MySQL的密码：</p>
+<p>Mysql<br>mysql&gt; select Password from mysql.user;<br>+——————————————-+<br>| Password                                  |<br>+——————————————-+<br>| *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |<br>| *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |<br>| *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |<br>| *81F5E21E35407D884A6CD4A731AEBFB6AF209E1B |<br>+——————————————-+<br>4 rows in set (0.00 sec)<br>然后开始使用字典破解：</p>
+<p>Bash<br>hashcat -a 0 -m 300 –force ‘81F5E21E35407D884A6CD4A731AEBFB6AF209E1B’ hashpass.txt -O<br>Linux /etc/shadow sha512crypt $6$, SHA512 (Unix)<br>查看/etc/shadow密码文件：</p>
+<p>Bash<br>root@kali-linux:~# cat /etc/shadow<br>root:$6$4ojiBMDPrehqrLkX$d2T7Cn8LKkLk4SDXgCh1IEqjhnsUekXaNUXSxiZIwUTndSqyd.9sEcu80sX9DuEHGmHOeoMev2O0ACYtjMett1:18201:0:99999:7:::<br>daemon:<em>:18024:0:99999:7:::<br>bin:</em>:18024:0:99999:7:::<br>sys:<em>:18024:0:99999:7:::<br>sync:</em>:18024:0:99999:7:::<br>games:<em>:18024:0:99999:7:::<br>man:</em>:18024:0:99999:7:::<br>lp:<em>:18024:0:99999:7:::<br>mail:</em>:18024:0:99999:7:::<br>news:<em>:18024:0:99999:7:::<br>uucp:</em>:18024:0:99999:7:::<br>proxy:<em>:18024:0:99999:7:::<br>www-data:</em>:18024:0:99999:7:::<br>backup:<em>:18024:0:99999:7:::<br>list:</em>:18024:0:99999:7:::<br>irc:<em>:18024:0:99999:7:::<br>gnats:</em>:18024:0:99999:7:::<br>nobody:<em>:18024:0:99999:7:::<br>_apt:</em>:18024:0:99999:7:::<br>systemd-timesync:<em>:18024:0:99999:7:::<br>systemd-network:</em>:18024:0:99999:7:::<br>systemd-resolve:<em>:18024:0:99999:7:::<br>mysql:!:18024:0:99999:7:::<br>ntp:</em>:18024:0:99999:7:::<br>messagebus:<em>:18024:0:99999:7:::<br>arpwatch:!:18024:0:99999:7:::<br>Debian-exim:!:18024:0:99999:7:::<br>uuidd:</em>:18024:0:99999:7:::<br>redsocks:!:18024:0:99999:7:::<br>tss:<em>:18024:0:99999:7:::<br>rwhod:</em>:18024:0:99999:7:::<br>iodine:<em>:18024:0:99999:7:::<br>miredo:</em>:18024:0:99999:7:::<br>dnsmasq:<em>:18024:0:99999:7:::<br>postgres:</em>:18024:0:99999:7:::<br>usbmux:<em>:18024:0:99999:7:::<br>rtkit:</em>:18024:0:99999:7:::<br>stunnel4:!:18024:0:99999:7:::<br>sshd:<em>:18024:0:99999:7:::<br>Debian-snmp:!:18024:0:99999:7:::<br>sslh:!:18024:0:99999:7:::<br>pulse:</em>:18024:0:99999:7:::<br>speech-dispatcher:!:18024:0:99999:7:::<br>avahi:<em>:18024:0:99999:7:::<br>saned:</em>:18024:0:99999:7:::<br>inetsim:<em>:18024:0:99999:7:::<br>colord:</em>:18024:0:99999:7:::<br>geoclue:<em>:18024:0:99999:7:::<br>king-phisher:</em>:18024:0:99999:7:::<br>Debian-gdm:<em>:18024:0:99999:7:::<br>dradis:</em>:18024:0:99999:7:::<br>beef-xss:*:18024:0:99999:7:::<br>systemd-coredump:!!:18082::::::<br>可以看到root是有密码的，前面使用的是$6表面hash的加密方式为:sha512crypt $6$, SHA512 (Unix)。</p>
+<p>Bash</p>
+<h1 id="掩码破解root密码-不在potfile中记录破解成功的hash-指定设备2（核显）来跑密码-并开启优化"><a href="#掩码破解root密码-不在potfile中记录破解成功的hash-指定设备2（核显）来跑密码-并开启优化" class="headerlink" title="掩码破解root密码 不在potfile中记录破解成功的hash 指定设备2（核显）来跑密码 并开启优化"></a>掩码破解root密码 不在potfile中记录破解成功的hash 指定设备2（核显）来跑密码 并开启优化</h1><p>hashcat -a 3 -m 1800 –force  ‘$6$4ojiBMDPrehqrLkX$d2T7Cn8LKkLk4SDXgCh1IEqjhnsUekXaNUXSxiZIwUTndSqyd.9sEcu80sX9DuEHGmHOeoMev2O0ACYtjMett1’ ‘?l?l?l?l’ -O -d 2 –potfile-disable</p>
+<h1 id="掩码破解root密码-忽略用户名-不在potfile中记录破解成功的hash-指定设备2（核显）来跑密码-并开启优化"><a href="#掩码破解root密码-忽略用户名-不在potfile中记录破解成功的hash-指定设备2（核显）来跑密码-并开启优化" class="headerlink" title="掩码破解root密码 忽略用户名 不在potfile中记录破解成功的hash 指定设备2（核显）来跑密码 并开启优化"></a>掩码破解root密码 忽略用户名 不在potfile中记录破解成功的hash 指定设备2（核显）来跑密码 并开启优化</h1><p>hashcat -a 3 -m 1800 –force  ‘root:$6$4ojiBMDPrehqrLkX$d2T7Cn8LKkLk4SDXgCh1IEqjhnsUekXaNUXSxiZIwUTndSqyd.9sEcu80sX9DuEHGmHOeoMev2O0ACYtjMett1’ ‘?l?l?l?l’ -O -d 2 –username –potfile-disable<br>macOS下自带的CPU和独显无法破解，这里国光本人手动切换了-d 2用核显才成功跑出来：</p>
+<p>字典破解Windows LM Hash<br>Bash<br>hashcat -a 0 -m 3000 –force ‘921988ba001dc8e14a3b108f3fa6cb6d’ password.txt<br>字典破解Windows NTLM Hash<br>Bash<br>hashcat -a 0 -m 1000 –force ‘e19ccf75ee54e06b06a5907af13cef42’ password.txt</p>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://www.sqlsec.com/2019/10/hashcat.html">1</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/13810.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/13810.html" class="post-title-link" itemprop="url">VulnHub DC-5 writeup</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-27 18:20:41" itemprop="dateCreated datePublished" datetime="2021-04-27T18:20:41+08:00">2021-04-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-02 23:35:09" itemprop="dateModified" datetime="2021-05-02T23:35:09+08:00">2021-05-02</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/42495.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/42495.html" class="post-title-link" itemprop="url">VulnHub DC-4 writeup</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-27 18:20:33" itemprop="dateCreated datePublished" datetime="2021-04-27T18:20:33+08:00">2021-04-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-02 23:35:09" itemprop="dateModified" datetime="2021-05-02T23:35:09+08:00">2021-05-02</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/38361.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/38361.html" class="post-title-link" itemprop="url">VulnHub DC-3 writeup</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-27 18:20:20" itemprop="dateCreated datePublished" datetime="2021-04-27T18:20:20+08:00">2021-04-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-05-02 23:35:09" itemprop="dateModified" datetime="2021-05-02T23:35:09+08:00">2021-05-02</time>
+      </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>0</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jxswcy</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">365k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

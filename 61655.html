@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jxswcy.top&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="没注意时间，很多都没做完，大部分都挺简单 SteganographyGhost Hunter1We intercepted this image from a user on Ghost Town. Some kind of tool was used to hide information in this image. zsteg -a找到flag 1flag&amp;#123;8862a805a314">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hacktober-CTF-2020-writeup">
+<meta property="og:url" content="https://jxswcy.top/61655.html">
+<meta property="og:site_name" content="jxswcy&#39;s blog">
+<meta property="og:description" content="没注意时间，很多都没做完，大部分都挺简单 SteganographyGhost Hunter1We intercepted this image from a user on Ghost Town. Some kind of tool was used to hide information in this image. zsteg -a找到flag 1flag&amp;#123;8862a805a314">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jxswcy.top/61655/11.png">
+<meta property="og:image" content="https://jxswcy.top/61655/1.png">
+<meta property="og:image" content="https://jxswcy.top/61655/2.png">
+<meta property="og:image" content="https://jxswcy.top/61655/3.png">
+<meta property="og:image" content="https://jxswcy.top/61655/4.png">
+<meta property="og:image" content="https://jxswcy.top/61655/5.png">
+<meta property="og:image" content="https://jxswcy.top/61655/6.png">
+<meta property="og:image" content="https://jxswcy.top/61655/7.png">
+<meta property="og:image" content="https://jxswcy.top/61655/8.jpg">
+<meta property="og:image" content="https://jxswcy.top/61655/9.png">
+<meta property="og:image" content="https://jxswcy.top/61655/10.png">
+<meta property="og:image" content="https://jxswcy.top/61655/12.png">
+<meta property="article:published_time" content="2020-10-20T10:41:01.000Z">
+<meta property="article:modified_time" content="2020-10-24T08:33:03.336Z">
+<meta property="article:author" content="jxswcy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jxswcy.top/61655/11.png">
+
+
+<link rel="canonical" href="https://jxswcy.top/61655.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;jxswcy.top&#x2F;61655.html&quot;,&quot;path&quot;:&quot;61655.html&quot;,&quot;title&quot;:&quot;Hacktober-CTF-2020-writeup&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Hacktober-CTF-2020-writeup | jxswcy's blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jxswcy's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hello CTF</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Steganography"><span class="nav-number">1.</span> <span class="nav-text">Steganography</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Ghost-Hunter"><span class="nav-number">1.1.</span> <span class="nav-text">Ghost Hunter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#You-Believe-in-Ghosts"><span class="nav-number">1.2.</span> <span class="nav-text">You Believe in Ghosts?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Blasphemy"><span class="nav-number">1.3.</span> <span class="nav-text">Blasphemy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Start-Digging"><span class="nav-number">1.4.</span> <span class="nav-text">Start Digging</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Traffic-Analysis"><span class="nav-number">2.</span> <span class="nav-text">Traffic Analysis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Remotely-Administrated-Evil"><span class="nav-number">2.1.</span> <span class="nav-text">Remotely Administrated Evil</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Evil-Corp%E2%80%99s-Child"><span class="nav-number">2.2.</span> <span class="nav-text">Evil Corp’s Child</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#An-Evil-Christmas-Carol"><span class="nav-number">2.3.</span> <span class="nav-text">An Evil Christmas Carol</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Evil-Corp%E2%80%99s-Child-2"><span class="nav-number">2.4.</span> <span class="nav-text">Evil Corp’s Child 2</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cryptography"><span class="nav-number">3.</span> <span class="nav-text">Cryptography</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hail-Caesar"><span class="nav-number">3.1.</span> <span class="nav-text">Hail Caesar!</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Down-the-Wrong-Path"><span class="nav-number">3.2.</span> <span class="nav-text">Down the Wrong Path</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bone-to-Pick"><span class="nav-number">3.3.</span> <span class="nav-text">Bone to Pick</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL"><span class="nav-number">4.</span> <span class="nav-text">SQL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Past-Demons"><span class="nav-number">4.1.</span> <span class="nav-text">Past Demons</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Address-Book"><span class="nav-number">4.2.</span> <span class="nav-text">Address Book</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jxswcy"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">jxswcy</p>
+  <div class="site-description" itemprop="description">Life is short. You need Python.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/61655.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hacktober-CTF-2020-writeup
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-20 18:41:01" itemprop="dateCreated datePublished" datetime="2020-10-20T18:41:01+08:00">2020-10-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-10-24 16:33:03" itemprop="dateModified" datetime="2020-10-24T16:33:03+08:00">2020-10-24</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>没注意时间，很多都没做完，大部分都挺简单</p>
+<h1 id="Steganography"><a href="#Steganography" class="headerlink" title="Steganography"></a>Steganography</h1><h2 id="Ghost-Hunter"><a href="#Ghost-Hunter" class="headerlink" title="Ghost Hunter"></a>Ghost Hunter</h2><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">We intercepted <span class="built_in">this</span> image <span class="keyword">from</span> a user <span class="literal">on</span> Ghost Town. Some kind <span class="keyword">of</span> tool was used <span class="keyword">to</span> hide information <span class="keyword">in</span> <span class="built_in">this</span> image.</span><br></pre></td></tr></table></figure>
+<p><code>zsteg -a</code>找到flag<br><img src="/61655/11.png"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">8862</span>a<span class="number">805</span>a<span class="number">3140996343</span>da<span class="number">91</span>bdcbda<span class="number">79</span>e&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="You-Believe-in-Ghosts"><a href="#You-Believe-in-Ghosts" class="headerlink" title="You Believe in Ghosts?"></a>You Believe in Ghosts?</h2><figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Check out <span class="keyword">this</span> image Donnell Aulner posted on Ghost Town. There<span class="number">&#x27;</span>s probably something hidden in <span class="keyword">this</span> image. Can you find it?</span><br></pre></td></tr></table></figure>
+<p>切换通道就好了<br><img src="/61655/1.png"></p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">flag</span><span class="template-variable">&#123;ghosts_everywhere&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Blasphemy"><a href="#Blasphemy" class="headerlink" title="Blasphemy"></a>Blasphemy</h2><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">We intercepted <span class="built_in">this</span> image <span class="keyword">from</span> a user <span class="literal">on</span> Ghost Town. Some kind <span class="keyword">of</span> tool was used <span class="keyword">to</span> hide a file <span class="keyword">in</span> <span class="built_in">this</span> image.</span><br></pre></td></tr></table></figure>
+<p>忽然发现stegoveritas很好用</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">stegoveritas witches.jpg</span><br><span class="line">cat results/steghide_4f02c03181479e3a4958835df08c8699.bin</span><br></pre></td></tr></table></figure>
+<p><img src="/61655/2.png"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">950634</span>ccc<span class="number">97</span>ca<span class="number">3</span>ef<span class="number">03</span>e<span class="number">22</span>c<span class="number">759</span>a<span class="number">356973</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Start-Digging"><a href="#Start-Digging" class="headerlink" title="Start Digging"></a>Start Digging</h2><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Ther<span class="string">e&#x27;s a secret buried here, but we need help finding it. Supposedly, there&#x27;</span>s a flag hidden deep <span class="keyword">within</span> this image. But how far down <span class="keyword">do</span> we need <span class="keyword">to</span> dig?</span><br></pre></td></tr></table></figure>
+<p>利用foremost分离图片后可以预览看到flag，但是打开图片显示另外的内容，没有找到隐藏文件，不知什么原理，mac下预览无法显示全flag，需要猜。<br><img src="/61655/3.png"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;buried_s<span class="number">3</span>cr<span class="number">3</span>ts&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="Traffic-Analysis"><a href="#Traffic-Analysis" class="headerlink" title="Traffic Analysis"></a>Traffic Analysis</h1><h2 id="Remotely-Administrated-Evil"><a href="#Remotely-Administrated-Evil" class="headerlink" title="Remotely Administrated Evil"></a>Remotely Administrated Evil</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">What <span class="keyword">is</span> the name of the <span class="built_in">executable</span> in the malicious url? Submit the filename <span class="keyword">as</span> the fla<span class="variable">g:</span> flag&#123;virus.<span class="keyword">bad</span>&#125;.</span><br></pre></td></tr></table></figure>
+<p>直接追踪tcp<br><img src="/61655/4.png"></p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">flag</span><span class="template-variable">&#123;solut.exe&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Evil-Corp’s-Child"><a href="#Evil-Corp’s-Child" class="headerlink" title="Evil Corp’s Child"></a>Evil Corp’s Child</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">What is <span class="keyword">the</span> MD5 hash <span class="keyword">of</span> <span class="keyword">the</span> Windows executable <span class="built_in">file</span>?</span><br><span class="line"></span><br><span class="line">NOTE: If you extract <span class="keyword">any</span> <span class="built_in">files</span> <span class="keyword">within</span> this challenge, please <span class="built_in">delete</span> <span class="keyword">the</span> <span class="built_in">file</span> <span class="keyword">after</span> you have completed <span class="keyword">the</span> challenge.</span><br></pre></td></tr></table></figure>
+
+<p>导出图片md5<br><img src="/61655/5.png"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;a<span class="number">95</span>d<span class="number">24937</span>acb<span class="number">3420</span>ee<span class="number">94493</span>db<span class="number">298</span>b<span class="number">295</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="An-Evil-Christmas-Carol"><a href="#An-Evil-Christmas-Carol" class="headerlink" title="An Evil Christmas Carol"></a>An Evil Christmas Carol</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A malicious dll was downloaded over http <span class="keyword">in</span> <span class="keyword">this</span> traffic, what was the ip address that delivered <span class="keyword">this</span> file?</span><br></pre></td></tr></table></figure>
+<p>追踪tcp流，搜索dll<br><img src="/61655/6.png"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">205.185.125.104</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Evil-Corp’s-Child-2"><a href="#Evil-Corp’s-Child-2" class="headerlink" title="Evil Corp’s Child 2"></a>Evil Corp’s Child 2</h2><figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">The</span> malware uses four different <span class="built_in">ip</span> addresses <span class="keyword">and</span> ports for communication, what <span class="built_in">IP</span> uses the same port as https? <span class="keyword">Submit</span> the flag as: flag&#123;<span class="built_in">ip</span> address&#125;.</span><br></pre></td></tr></table></figure>
+
+<p>ip试出来的，不懂原理</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">213.136.94.177</span>&#125;</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="Cryptography"><a href="#Cryptography" class="headerlink" title="Cryptography"></a>Cryptography</h1><h2 id="Hail-Caesar"><a href="#Hail-Caesar" class="headerlink" title="Hail Caesar!"></a>Hail Caesar!</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">This image was found <span class="keyword">in</span> Ghost Town along <span class="keyword">with</span> <span class="keyword">the</span> encoded message below. See <span class="keyword">if</span> you can decipher <span class="keyword">the</span> message. Enter <span class="keyword">the</span> entire decoded message <span class="keyword">as</span> <span class="keyword">the</span> flag.</span><br><span class="line"></span><br><span class="line">Decode this: TGG KUSJWV QGM</span><br></pre></td></tr></table></figure>
+
+<p>直接凯撒爆</p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">BOO </span><span class="keyword">SCARED </span>YOU</span><br></pre></td></tr></table></figure>
+
+<h2 id="Down-the-Wrong-Path"><a href="#Down-the-Wrong-Path" class="headerlink" title="Down the Wrong Path"></a>Down the Wrong Path</h2><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">One <span class="keyword">of</span> our operatives took <span class="keyword">a</span> photo <span class="keyword">of</span> <span class="keyword">a</span> notebook belonging <span class="built_in">to</span> Donnell. We think <span class="keyword">it</span><span class="string">&#x27;s a message intended for another member of DEADFACE. Can you decipher the message and tell us who it&#x27;</span>s intended <span class="keyword">for</span>?</span><br></pre></td></tr></table></figure>
+<p><img src="/61655/7.png"></p>
+<p>竖着看</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmember <span class="keyword">to</span> <span class="keyword">tell</span> spookyboi <span class="keyword">about</span> <span class="keyword">the</span> new tareget sofour next attack</span><br></pre></td></tr></table></figure>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">flag</span><span class="template-variable">&#123;spookyboi&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="Bone-to-Pick"><a href="#Bone-to-Pick" class="headerlink" title="Bone to Pick"></a>Bone to Pick</h2><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">We intercepted network traffic <span class="keyword">between</span> two suspected DEADFACE actors. The problem <span class="keyword">is</span>, we have no idea what we&#x27;re looking <span class="keyword">at</span>. We think <span class="keyword">it</span> might have critical information. See <span class="keyword">if</span> you can find <span class="keyword">the</span> critical information <span class="keyword">from</span> <span class="keyword">the</span> link <span class="keyword">below</span> <span class="keyword">and</span> submit <span class="keyword">the</span> flag.</span><br></pre></td></tr></table></figure>
+<p>数据略<br>base64转图片，注意把<code>-</code>换成<code>+</code>，<code>_</code>换成<code>/</code>，最后还要补<code>==</code><br><img src="/61655/8.jpg"></p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">flag</span><span class="template-variable">&#123;angrybones&#125;</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h1><h2 id="Past-Demons"><a href="#Past-Demons" class="headerlink" title="Past Demons"></a>Past Demons</h2><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">We<span class="comment">&#x27;ve had a hard time finding anything on spookyboi. But finally, with some search engine finessing, an analyst found an old, vulnerable server spookyboi used to run. We extracted a database, now we need your help finding the password. Submit the password as the flag: flag&#123;password&#125;.</span></span><br></pre></td></tr></table></figure>
+<p>打开db文件，发现<code>spookyboi</code>对应的密码<code>59DEA36D05AACAA547DE42E9956678E7</code>，md5解密得flag<br>md5解密<br><img src="/61655/9.png"><br><img src="/61655/10.png"></p>
+<figure class="highlight dust"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">flag</span><span class="template-variable">&#123;zxcvbnm&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Address-Book"><a href="#Address-Book" class="headerlink" title="Address Book"></a>Address Book</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Shallow</span> <span class="type">Grave</span> <span class="type">University</span> has provided us <span class="keyword">with</span> a dump of their database. <span class="type">Find</span> luciafer<span class="symbol">&#x27;s</span> email address and submit it as the flag in <span class="keyword">this</span> format: flag&#123;username<span class="meta">@email</span>.com&#125;</span><br></pre></td></tr></table></figure>
+<p>luciafe的last name是<code>Havron</code>，搜一下</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">49</span>,&#x27;luchav<span class="number">1987</span>&#x27;,&#x27;LUCIA&#x27;,&#x27;HAVRON&#x27;,&#x27;R&#x27;,&#x27;luc1afer.h4vr0n@shallowgraveu.com&#x27;,&#x27;<span class="number">2991</span> Y Alley&#x27;,&#x27;Broken Bow&#x27;,<span class="number">38</span>,&#x27;<span class="number">2785</span>6&#x27;,&#x27;f&#x27;,&#x27;<span class="number">1987-12-13</span>&#x27;),</span><br></pre></td></tr></table></figure>
+<p><img src="/61655/12.png"></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;luc<span class="number">1</span>afer.h<span class="number">4</span>vr<span class="number">0</span>n@shallowgraveu.com&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jxswcy 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jxswcy 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/21617.html" rel="prev" title="内网协作软件">
+                  <i class="fa fa-chevron-left"></i> 内网协作软件
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/39667.html" rel="next" title="exam11">
+                  exam11 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jxswcy</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">365k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

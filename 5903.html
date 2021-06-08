@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jxswcy.top&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="官方网站 level 01The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the passw">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bandit labs 通关记">
+<meta property="og:url" content="https://jxswcy.top/5903.html">
+<meta property="og:site_name" content="jxswcy&#39;s blog">
+<meta property="og:description" content="官方网站 level 01The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the passw">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jxswcy.top/5903/1.png">
+<meta property="og:image" content="https://jxswcy.top/5903/2.png">
+<meta property="og:image" content="https://jxswcy.top/5903/3.png">
+<meta property="og:image" content="https://jxswcy.top/5903/4.png">
+<meta property="og:image" content="https://jxswcy.top/5903/5.png">
+<meta property="og:image" content="https://jxswcy.top/5903/6.png">
+<meta property="og:image" content="https://jxswcy.top/5903/7.png">
+<meta property="og:image" content="https://jxswcy.top/5903/8.png">
+<meta property="og:image" content="https://jxswcy.top/5903/9.png">
+<meta property="og:image" content="https://jxswcy.top/5903/10.png">
+<meta property="og:image" content="https://jxswcy.top/5903/11.png">
+<meta property="og:image" content="https://jxswcy.top/5903/12.png">
+<meta property="og:image" content="https://jxswcy.top/5903/13.png">
+<meta property="og:image" content="https://jxswcy.top/5903/14.png">
+<meta property="og:image" content="https://jxswcy.top/5903/15.png">
+<meta property="og:image" content="https://jxswcy.top/5903/16.png">
+<meta property="og:image" content="https://jxswcy.top/5903/17.png">
+<meta property="og:image" content="https://jxswcy.top/5903/18.png">
+<meta property="og:image" content="https://jxswcy.top/5903/19.png">
+<meta property="og:image" content="https://jxswcy.top/5903/20.png">
+<meta property="og:image" content="https://jxswcy.top/5903/21.png">
+<meta property="og:image" content="https://jxswcy.top/5903/22.png">
+<meta property="og:image" content="https://jxswcy.top/5903/23.png">
+<meta property="og:image" content="https://jxswcy.top/5903/24.png">
+<meta property="og:image" content="https://jxswcy.top/5903/25.png">
+<meta property="article:published_time" content="2021-04-18T02:02:34.000Z">
+<meta property="article:modified_time" content="2021-04-19T06:26:18.896Z">
+<meta property="article:author" content="jxswcy">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jxswcy.top/5903/1.png">
+
+
+<link rel="canonical" href="https://jxswcy.top/5903.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;jxswcy.top&#x2F;5903.html&quot;,&quot;path&quot;:&quot;5903.html&quot;,&quot;title&quot;:&quot;bandit labs 通关记&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>bandit labs 通关记 | jxswcy's blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jxswcy's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hello CTF</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#level-0"><span class="nav-number">1.</span> <span class="nav-text">level 0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-0-%E2%86%92-Level-1"><span class="nav-number">2.</span> <span class="nav-text">Level 0 → Level 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">2.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-1-%E2%86%92-Level-2"><span class="nav-number">3.</span> <span class="nav-text">Level 1 → Level 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-1"><span class="nav-number">3.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-2-%E2%86%92-Level-3"><span class="nav-number">4.</span> <span class="nav-text">Level 2 → Level 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-2"><span class="nav-number">4.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-3-%E2%86%92-Level-4"><span class="nav-number">5.</span> <span class="nav-text">Level 3 → Level 4</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-3"><span class="nav-number">5.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-4-%E2%86%92-Level-5"><span class="nav-number">6.</span> <span class="nav-text">Level 4 → Level 5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-4"><span class="nav-number">6.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-5-%E2%86%92-Level-6"><span class="nav-number">7.</span> <span class="nav-text">Level 5 → Level 6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-5"><span class="nav-number">7.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-6-%E2%86%92-Level-7"><span class="nav-number">8.</span> <span class="nav-text">Level 6 → Level 7</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-6"><span class="nav-number">8.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-7-%E2%86%92-Level-8"><span class="nav-number">9.</span> <span class="nav-text">Level 7 → Level 8</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-7"><span class="nav-number">9.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-8-%E2%86%92-Level-9"><span class="nav-number">10.</span> <span class="nav-text">Level 8 → Level 9</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-8"><span class="nav-number">10.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-9-%E2%86%92-Level-10"><span class="nav-number">11.</span> <span class="nav-text">Level 9 → Level 10</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-9"><span class="nav-number">11.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-10-%E2%86%92-Level-11"><span class="nav-number">12.</span> <span class="nav-text">Level 10 → Level 11</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-10"><span class="nav-number">12.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-11-%E2%86%92-Level-12"><span class="nav-number">13.</span> <span class="nav-text">Level 11 → Level 12</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-11"><span class="nav-number">13.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-12-%E2%86%92-Level-13"><span class="nav-number">14.</span> <span class="nav-text">Level 12 → Level 13</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-12"><span class="nav-number">14.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-13-%E2%86%92-Level-14"><span class="nav-number">15.</span> <span class="nav-text">Level 13 → Level 14</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-13"><span class="nav-number">15.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-14-%E2%86%92-Level-15"><span class="nav-number">16.</span> <span class="nav-text">Level 14 → Level 15</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-14"><span class="nav-number">16.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-15-%E2%86%92-Level-16"><span class="nav-number">17.</span> <span class="nav-text">Level 15 → Level 16</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-15"><span class="nav-number">17.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-16-%E2%86%92-Level-17"><span class="nav-number">18.</span> <span class="nav-text">Level 16 → Level 17</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-16"><span class="nav-number">18.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-17-%E2%86%92-Level-18"><span class="nav-number">19.</span> <span class="nav-text">Level 17 → Level 18</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-17"><span class="nav-number">19.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-18-%E2%86%92-Level-19"><span class="nav-number">20.</span> <span class="nav-text">Level 18 → Level 19</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-18"><span class="nav-number">20.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-19-%E2%86%92-Level-20"><span class="nav-number">21.</span> <span class="nav-text">Level 19 → Level 20</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-19"><span class="nav-number">21.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-20-%E2%86%92-Level-21"><span class="nav-number">22.</span> <span class="nav-text">Level 20 → Level 21</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-21-%E2%86%92-Level-22"><span class="nav-number">23.</span> <span class="nav-text">Level 21 → Level 22</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-20"><span class="nav-number">23.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-22-%E2%86%92-Level-23"><span class="nav-number">24.</span> <span class="nav-text">Level 22 → Level 23</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-21"><span class="nav-number">24.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-23-%E2%86%92-Level-24"><span class="nav-number">25.</span> <span class="nav-text">Level 23 → Level 24</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#-22"><span class="nav-number">25.1.</span> <span class="nav-text"></span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Level-24-%E2%86%92-Level-25"><span class="nav-number">26.</span> <span class="nav-text">Level 24 → Level 25</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jxswcy"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">jxswcy</p>
+  <div class="site-description" itemprop="description">Life is short. You need Python.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/5903.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          bandit labs 通关记
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-18 10:02:34" itemprop="dateCreated datePublished" datetime="2021-04-18T10:02:34+08:00">2021-04-18</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-04-19 14:26:18" itemprop="dateModified" datetime="2021-04-19T14:26:18+08:00">2021-04-19</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>15k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>13 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><a target="_blank" rel="noopener" href="https://overthewire.org/wargames/bandit/">官方网站</a></p>
+<h1 id="level-0"><a href="#level-0" class="headerlink" title="level 0"></a>level 0</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The goal <span class="keyword">of</span> this <span class="keyword">level</span> <span class="keyword">is</span> <span class="keyword">for</span> you <span class="keyword">to</span> <span class="keyword">log</span> <span class="keyword">into</span> the game <span class="keyword">using</span> SSH. The host <span class="keyword">to</span> which you need <span class="keyword">to</span> <span class="keyword">connect</span> <span class="keyword">is</span> bandit.labs.overthewire.org, <span class="keyword">on</span> port <span class="number">2220.</span> The username <span class="keyword">is</span> bandit0 <span class="keyword">and</span> the <span class="keyword">password</span> <span class="keyword">is</span> bandit0. Once <span class="keyword">logged</span> <span class="keyword">in</span>, go <span class="keyword">to</span> the <span class="keyword">Level</span> <span class="number">1</span> page <span class="keyword">to</span> find <span class="keyword">out</span> how <span class="keyword">to</span> beat <span class="keyword">Level</span> <span class="number">1.</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit0@bandit.labs.overthewire.org -p 2220</span><br><span class="line">bandit0</span><br></pre></td></tr></table></figure>
+<hr>
+<h1 id="Level-0-→-Level-1"><a href="#Level-0-→-Level-1" class="headerlink" title="Level 0 → Level 1"></a>Level 0 → Level 1</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The <span class="keyword">password</span> <span class="keyword">for</span> the next <span class="keyword">level</span> <span class="keyword">is</span> stored <span class="keyword">in</span> a file <span class="keyword">called</span> readme located <span class="keyword">in</span> the home directory. Use this <span class="keyword">password</span> <span class="keyword">to</span> <span class="keyword">log</span> <span class="keyword">into</span> bandit1 <span class="keyword">using</span> SSH. Whenever you find a <span class="keyword">password</span> <span class="keyword">for</span> a <span class="keyword">level</span>, use SSH (<span class="keyword">on</span> port <span class="number">2220</span>) <span class="keyword">to</span> <span class="keyword">log</span> <span class="keyword">into</span> that <span class="keyword">level</span> <span class="keyword">and</span> <span class="keyword">continue</span> the game.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find / -name readme</span><br><span class="line">cat /home/bandit0/readme</span><br></pre></td></tr></table></figure>
+<h2 id><a href="#" class="headerlink" title></a><img src="/5903/1.png"></h2><h1 id="Level-1-→-Level-2"><a href="#Level-1-→-Level-2" class="headerlink" title="Level 1 → Level 2"></a>Level 1 → Level 2</h1><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The password <span class="keyword">for</span> <span class="keyword">the</span> next level is stored <span class="keyword">in</span> <span class="keyword">a</span> <span class="built_in">file</span> called - located <span class="keyword">in</span> <span class="keyword">the</span> home <span class="built_in">directory</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit1@bandit.labs.overthewire.org -p 2220</span><br><span class="line">boJ9jbbUNNfktd78OOpsqOltutMc3MY1</span><br></pre></td></tr></table></figure>
+<p>查看<code>-</code>文件，但是根据<a target="_blank" rel="noopener" href="https://tldp.org/LDP/abs/html/special-chars.html">Advanced Bash-Scripting Guide</a>的定义，<code>cat -</code>进入到标准输入。<br>这里引出<code>cat</code>与<code>cat -</code>的区别<br><code>cat file</code>打开文件，没有权限的可以<code>sudo cat file</code><br><code>cat &lt;file</code> shell打开文件，将其作为cat标准输入传递</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;-</span><br></pre></td></tr></table></figure>
+<h2 id="-1"><a href="#-1" class="headerlink" title></a><img src="/5903/2.png"></h2><h1 id="Level-2-→-Level-3"><a href="#Level-2-→-Level-3" class="headerlink" title="Level 2 → Level 3"></a>Level 2 → Level 3</h1><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The password <span class="keyword">for</span> <span class="keyword">the</span> next level is stored <span class="keyword">in</span> <span class="keyword">a</span> <span class="built_in">file</span> called spaces <span class="keyword">in</span> this filename located <span class="keyword">in</span> <span class="keyword">the</span> home <span class="built_in">directory</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit2@bandit.labs.overthewire.org -p 2220</span><br><span class="line">CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9</span><br></pre></td></tr></table></figure>
+<p>打开<code>spaces in this filename</code>文件，需要加双引号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat <span class="string">&quot;spaces in this filename&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="-2"><a href="#-2" class="headerlink" title></a><img src="/5903/3.png"></h2><h1 id="Level-3-→-Level-4"><a href="#Level-3-→-Level-4" class="headerlink" title="Level 3 → Level 4"></a>Level 3 → Level 4</h1><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The password <span class="keyword">for</span> <span class="keyword">the</span> next level is stored <span class="keyword">in</span> <span class="keyword">a</span> hidden <span class="built_in">file</span> <span class="keyword">in</span> <span class="keyword">the</span> inhere <span class="built_in">directory</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit3@bandit.labs.overthewire.org -p 2220</span><br><span class="line">UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat inhere/.hidden</span><br></pre></td></tr></table></figure>
+<h2 id="-3"><a href="#-3" class="headerlink" title></a><img src="/5903/4.png"></h2><h1 id="Level-4-→-Level-5"><a href="#Level-4-→-Level-5" class="headerlink" title="Level 4 → Level 5"></a>Level 4 → Level 5</h1><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The password <span class="keyword">for</span> the <span class="keyword">next</span> level <span class="keyword">is</span> stored in the <span class="keyword">only</span> human-readable <span class="keyword">file</span> in the inhere directory. Tip: <span class="keyword">if</span> your terminal <span class="keyword">is</span> messed <span class="keyword">up</span>, <span class="keyword">try</span> the “reset” <span class="keyword">command</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit4@bandit.labs.overthewire.org -p 2220</span><br><span class="line">pIwrPrtPN36QITSp3EQaw936yaFoFgAB</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cat inhere/*</span><br><span class="line">cat inhere/-file07</span><br><span class="line"><span class="built_in">cd</span> inhere/</span><br><span class="line">cat &lt;-file07</span><br></pre></td></tr></table></figure>
+<h2 id="-4"><a href="#-4" class="headerlink" title></a><img src="/5903/5.png"></h2><h1 id="Level-5-→-Level-6"><a href="#Level-5-→-Level-6" class="headerlink" title="Level 5 → Level 6"></a>Level 5 → Level 6</h1><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">The password <span class="keyword">for</span> <span class="keyword">the</span> next level is stored <span class="keyword">in</span> <span class="keyword">a</span> <span class="built_in">file</span> somewhere under <span class="keyword">the</span> inhere <span class="built_in">directory</span> <span class="keyword">and</span> has all <span class="keyword">of</span> <span class="keyword">the</span> following properties:</span><br><span class="line"></span><br><span class="line">human-readable</span><br><span class="line"><span class="number">1033</span> <span class="keyword">bytes</span> <span class="keyword">in</span> size</span><br><span class="line"><span class="keyword">not</span> executable</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit5@bandit.labs.overthewire.org -p 2220</span><br><span class="line">koReBOKuIDDepwhWk7jZC0RTdopnAYKh</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find -<span class="built_in">type</span> f -size 1033c ! -executable</span><br><span class="line">cat inhere/maybehere07/.file2</span><br></pre></td></tr></table></figure>
+<h2 id="-5"><a href="#-5" class="headerlink" title></a><img src="/5903/6.png"></h2><h1 id="Level-6-→-Level-7"><a href="#Level-6-→-Level-7" class="headerlink" title="Level 6 → Level 7"></a>Level 6 → Level 7</h1><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">The password <span class="keyword">for</span> the <span class="keyword">next</span> level <span class="keyword">is</span> stored somewhere on the <span class="keyword">server</span> and has all of the following properties:</span><br><span class="line"></span><br><span class="line">owned <span class="keyword">by</span> user bandit7</span><br><span class="line">owned <span class="keyword">by</span> <span class="keyword">group</span> bandit6</span><br><span class="line"><span class="number">33</span> bytes <span class="keyword">in</span> size</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit6@bandit.labs.overthewire.org -p 2220</span><br><span class="line">DXjZPULLxYr17uwoI01bNLQbtFemEgo7</span><br></pre></td></tr></table></figure>
+<p>文件特征</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">owned by <span class="keyword">user</span> <span class="title">bandit7</span></span><br><span class="line">owned by <span class="keyword">group</span> <span class="title">bandit6</span></span><br><span class="line"><span class="number">33</span> bytes <span class="keyword">in</span> size</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">find / -user bandit7 -group bandit6 -size 33c 2&gt;/dev/null</span><br><span class="line">cat /var/lib/dpkg/info/bandit7.password</span><br></pre></td></tr></table></figure>
+<h2 id="-6"><a href="#-6" class="headerlink" title></a><img src="/5903/7.png"></h2><h1 id="Level-7-→-Level-8"><a href="#Level-7-→-Level-8" class="headerlink" title="Level 7 → Level 8"></a>Level 7 → Level 8</h1><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The password <span class="keyword">for</span> <span class="keyword">the</span> next level is stored <span class="keyword">in</span> <span class="keyword">the</span> <span class="built_in">file</span> data.txt next <span class="built_in">to</span> <span class="keyword">the</span> <span class="built_in">word</span> millionth</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit7@bandit.labs.overthewire.org -p 2220</span><br><span class="line">HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs</span><br></pre></td></tr></table></figure>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">cat</span> <span class="class"><span class="keyword">data</span>.txt | grep millionth</span></span><br></pre></td></tr></table></figure>
+<h2 id="-7"><a href="#-7" class="headerlink" title></a><img src="/5903/8.png"></h2><h1 id="Level-8-→-Level-9"><a href="#Level-8-→-Level-9" class="headerlink" title="Level 8 → Level 9"></a>Level 8 → Level 9</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The <span class="keyword">password</span> <span class="keyword">for</span> the next <span class="keyword">level</span> <span class="keyword">is</span> stored <span class="keyword">in</span> the file data.txt <span class="keyword">and</span> <span class="keyword">is</span> the <span class="keyword">only</span> <span class="type">line</span> <span class="keyword">of</span> <span class="type">text</span> that occurs <span class="keyword">only</span> once</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit8@bandit.labs.overthewire.org -p 2220</span><br><span class="line">cvX2JJa4CFALtqS87jk27qwqGhBM9plV</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cat data.txt | sort | uniq -c | sort -nr | tail -n 1</span><br><span class="line">cat data.txt | sort | uniq -u</span><br><span class="line"><span class="comment">#sort排序</span></span><br><span class="line"><span class="comment">#sort -n     按数字排序</span></span><br><span class="line"><span class="comment">#sort -r     倒序排序</span></span><br><span class="line"><span class="comment">#uniq -c     删除文件中重复出现的行，并在行首显示该行重复出现的次数</span></span><br><span class="line"><span class="comment">#uniq -u     仅显示出一次的行列</span></span><br><span class="line"><span class="comment">#tail -n 1   显示最后一行</span></span><br></pre></td></tr></table></figure>
+<h2 id="-8"><a href="#-8" class="headerlink" title></a><img src="/5903/9.png"></h2><h1 id="Level-9-→-Level-10"><a href="#Level-9-→-Level-10" class="headerlink" title="Level 9 → Level 10"></a>Level 9 → Level 10</h1><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The password <span class="keyword">for</span> <span class="keyword">the</span> next level is stored <span class="keyword">in</span> <span class="keyword">the</span> <span class="built_in">file</span> data.txt <span class="keyword">in</span> <span class="literal">one</span> <span class="keyword">of</span> <span class="keyword">the</span> few human-readable strings, preceded <span class="keyword">by</span> several ‘=’ <span class="keyword">characters</span>.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit9@bandit.labs.overthewire.org -p 2220</span><br><span class="line">UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat data.txt | strings | grep =</span><br></pre></td></tr></table></figure>
+<h2 id="-9"><a href="#-9" class="headerlink" title></a><img src="/5903/10.png"></h2><h1 id="Level-10-→-Level-11"><a href="#Level-10-→-Level-11" class="headerlink" title="Level 10 → Level 11"></a>Level 10 → Level 11</h1><figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The password for the next level is stored <span class="keyword">in</span> the <span class="keyword">file</span> <span class="keyword">data</span>.txt, which <span class="keyword">contains</span> base64 encoded <span class="keyword">data</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit10@bandit.labs.overthewire.org -p 2220</span><br><span class="line">truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk</span><br></pre></td></tr></table></figure>
+<p>直接解码</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat data.txt | base64 -d</span><br></pre></td></tr></table></figure>
+<h2 id="-10"><a href="#-10" class="headerlink" title></a><img src="/5903/11.png"></h2><h1 id="Level-11-→-Level-12"><a href="#Level-11-→-Level-12" class="headerlink" title="Level 11 → Level 12"></a>Level 11 → Level 12</h1><figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">The</span> password for the next level is stored <span class="keyword">in</span> the file <span class="class"><span class="keyword">data</span>.txt, where all lowercase (<span class="title">a</span>-<span class="title">z</span>) and uppercase (<span class="type">A</span>-<span class="type">Z</span>) letters have been rotated by 13 positions</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit11@bandit.labs.overthewire.org -p 2220</span><br><span class="line">IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat data.txt | tr <span class="string">&#x27;a-zA-Z&#x27;</span> <span class="string">&#x27;n-za-mN-ZA-M&#x27;</span></span><br></pre></td></tr></table></figure>
+<h2 id="-11"><a href="#-11" class="headerlink" title></a><img src="/5903/12.png"></h2><h1 id="Level-12-→-Level-13"><a href="#Level-12-→-Level-13" class="headerlink" title="Level 12 → Level 13"></a>Level 12 → Level 13</h1><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The password <span class="keyword">for</span> <span class="keyword">the</span> next level is stored <span class="keyword">in</span> <span class="keyword">the</span> <span class="built_in">file</span> data.txt, which is <span class="keyword">a</span> hexdump <span class="keyword">of</span> <span class="keyword">a</span> <span class="built_in">file</span> that has been repeatedly compressed. For this level <span class="keyword">it</span> may be useful <span class="built_in">to</span> <span class="built_in">create</span> <span class="keyword">a</span> <span class="built_in">directory</span> under /tmp <span class="keyword">in</span> which you can work <span class="keyword">using</span> mkdir. For example: mkdir /tmp/myname123. Then copy <span class="keyword">the</span> datafile <span class="keyword">using</span> cp, <span class="keyword">and</span> <span class="built_in">rename</span> <span class="keyword">it</span> <span class="keyword">using</span> mv (<span class="built_in">read</span> <span class="keyword">the</span> manpages!)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit12@bandit.labs.overthewire.org -p 2220</span><br><span class="line">5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu</span><br></pre></td></tr></table></figure>
+<p>套娃题</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">bandit12@bandit:~$ mkdir /tmp/jxswcy</span><br><span class="line">bandit12@bandit:~$ cp data.txt /tmp/jxswcy</span><br><span class="line">bandit12@bandit:~$ <span class="built_in">cd</span> /tmp/jxswcy</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ file data.txt</span><br><span class="line">data.txt: ASCII text</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ xxd -r data.txt data</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ file data</span><br><span class="line">data: gzip compressed data, was <span class="string">&quot;data2.bin&quot;</span>, last modified: Thu May  7 18:14:30 2020, max compression, from Unix</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ mv data data.gz</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ gzip -d data.gz</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ file data</span><br><span class="line">data: bzip2 compressed data, block size = 900k</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ mv data data.bz2</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ bzip2 -d data.bz2</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ file data</span><br><span class="line">data: gzip compressed data, was <span class="string">&quot;data4.bin&quot;</span>, last modified: Thu May  7 18:14:30 2020, max compression, from Unix</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ mv data data.gz</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ gzip -d data.gz</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ file data</span><br><span class="line">data: POSIX tar archive (GNU)</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ mv data data.tar</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ tar xvf data.tar</span><br><span class="line">data5.bin</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ file data5.bin</span><br><span class="line">data5.bin: POSIX tar archive (GNU)</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ mv data5.bin data5.tar</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ tar xvf data5.tar</span><br><span class="line">data6.bin</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ file data6.bin</span><br><span class="line">data6.bin: bzip2 compressed data, block size = 900k</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ mv data6.bin data6.tar</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ tar xvf data6.tar</span><br><span class="line">data8.bin</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ file data8.bin</span><br><span class="line">data8.bin: gzip compressed data, was <span class="string">&quot;data9.bin&quot;</span>, last modified: Thu May  7 18:14:30 2020, max compression, from Unix</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ mv data8.bin data8.gz</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ gzip -d data8.gz</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ file data8</span><br><span class="line">data8: ASCII text</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ cat data8</span><br><span class="line">The password is 8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL</span><br><span class="line">bandit12@bandit:/tmp/jxswcy$ rm -rf /tmp/jxswcy</span><br></pre></td></tr></table></figure>
+<h2 id="-12"><a href="#-12" class="headerlink" title></a><img src="/5903/13.png"></h2><h1 id="Level-13-→-Level-14"><a href="#Level-13-→-Level-14" class="headerlink" title="Level 13 → Level 14"></a>Level 13 → Level 14</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The <span class="keyword">password</span> <span class="keyword">for</span> the next <span class="keyword">level</span> <span class="keyword">is</span> stored <span class="keyword">in</span> /etc/bandit_pass/bandit14 <span class="keyword">and</span> can <span class="keyword">only</span> be <span class="keyword">read</span> <span class="keyword">by</span> <span class="keyword">user</span> bandit14. <span class="keyword">For</span> this <span class="keyword">level</span>, you don’t <span class="keyword">get</span> the next <span class="keyword">password</span>, but you <span class="keyword">get</span> a private SSH key that can be used <span class="keyword">to</span> <span class="keyword">log</span> <span class="keyword">into</span> the next <span class="keyword">level</span>. Note: localhost <span class="keyword">is</span> a hostname that refers <span class="keyword">to</span> the machine you are working <span class="keyword">on</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit13@bandit.labs.overthewire.org -p 2220</span><br><span class="line">8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">bandit13@bandit:~$ ls</span><br><span class="line">sshkey.private</span><br><span class="line">bandit13@bandit:~$ cat sshkey.private</span><br><span class="line">-----BEGIN RSA PRIVATE KEY-----</span><br><span class="line">MIIEpAIBAAKCAQEAxkkOE83W2cOT7IWhFc9aPaaQmQDdgzuXCv+ppZHa++buSkN+</span><br><span class="line">gg0tcr7Fw8NLGa5+Uzec2rEg0WmeevB13AIoYp0MZyETq46t+jk9puNwZwIt9XgB</span><br><span class="line">ZufGtZEwWbFWw/vVLNwOXBe4UWStGRWzgPpEeSv5Tb1VjLZIBdGphTIK22Amz6Zb</span><br><span class="line">ThMsiMnyJafEwJ/T8PQO3myS91vUHEuoOMAzoUID4kN0MEZ3+XahyK0HJVq68KsV</span><br><span class="line">ObefXG1vvA3GAJ29kxJaqvRfgYnqZryWN7w3CHjNU4c/2Jkp+n8L0SnxaNA+WYA7</span><br><span class="line">jiPyTF0is8uzMlYQ4l1Lzh/8/MpvhCQF8r22dwIDAQABAoIBAQC6dWBjhyEOzjeA</span><br><span class="line">J3j/RWmap9M5zfJ/wb2bfidNpwbB8rsJ4sZIDZQ7XuIh4LfygoAQSS+bBw3RXvzE</span><br><span class="line">pvJt3SmU8hIDuLsCjL1VnBY5pY7Bju8g8aR/3FyjyNAqx/TLfzlLYfOu7i9Jet67</span><br><span class="line">xAh0tONG/u8FB5I3LAI2Vp6OviwvdWeC4nOxCthldpuPKNLA8rmMMVRTKQ+7T2VS</span><br><span class="line">nXmwYckKUcUgzoVSpiNZaS0zUDypdpy2+tRH3MQa5kqN1YKjvF8RC47woOYCktsD</span><br><span class="line">o3FFpGNFec9Taa3Msy+DfQQhHKZFKIL3bJDONtmrVvtYK40/yeU4aZ/HA2DQzwhe</span><br><span class="line">ol1AfiEhAoGBAOnVjosBkm7sblK+n4IEwPxs8sOmhPnTDUy5WGrpSCrXOmsVIBUf</span><br><span class="line">laL3ZGLx3xCIwtCnEucB9DvN2HZkupc/h6hTKUYLqXuyLD8njTrbRhLgbC9QrKrS</span><br><span class="line">M1F2fSTxVqPtZDlDMwjNR04xHA/fKh8bXXyTMqOHNJTHHNhbh3McdURjAoGBANkU</span><br><span class="line">1hqfnw7+aXncJ9bjysr1ZWbqOE5Nd8AFgfwaKuGTTVX2NsUQnCMWdOp+wFak40JH</span><br><span class="line">PKWkJNdBG+ex0H9JNQsTK3X5PBMAS8AfX0GrKeuwKWA6erytVTqjOfLYcdp5+z9s</span><br><span class="line">8DtVCxDuVsM+i4X8UqIGOlvGbtKEVokHPFXP1q/dAoGAcHg5YX7WEehCgCYTzpO+</span><br><span class="line">xysX8ScM2qS6xuZ3MqUWAxUWkh7NGZvhe0sGy9iOdANzwKw7mUUFViaCMR/t54W1</span><br><span class="line">GC83sOs3D7n5Mj8x3NdO8xFit7dT9a245TvaoYQ7KgmqpSg/ScKCw4c3eiLava+J</span><br><span class="line">3btnJeSIU+8ZXq9XjPRpKwUCgYA7z6LiOQKxNeXH3qHXcnHok855maUj5fJNpPbY</span><br><span class="line">iDkyZ8ySF8GlcFsky8Yw6fWCqfG3zDrohJ5l9JmEsBh7SadkwsZhvecQcS9t4vby</span><br><span class="line">9/8X4jS0P8ibfcKS4nBP+dT81kkkg5Z5MohXBORA7VWx+ACohcDEkprsQ+w32xeD</span><br><span class="line">qT1EvQKBgQDKm8ws2ByvSUVs9GjTilCajFqLJ0eVYzRPaY6f++Gv/UVfAPV4c+S0</span><br><span class="line">kAWpXbv5tbkkzbS0eaLPTKgLzavXtQoTtKwrjpolHKIHUz6Wu+n4abfAIRFubOdN</span><br><span class="line">/+aLoRQ0yBDRbdXMsZN/jvY44eM+xRLdRVyMmdPtP8belRi2E2aEzA==</span><br><span class="line">-----END RSA PRIVATE KEY-----</span><br><span class="line">bandit13@bandit:~$ ssh -i sshkey.private bandit14@localhost</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bandit14@bandit:~$ cat /etc/bandit_pass/bandit14</span><br><span class="line">4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e</span><br></pre></td></tr></table></figure>
+<h2 id="-13"><a href="#-13" class="headerlink" title></a><img src="/5903/14.png"></h2><h1 id="Level-14-→-Level-15"><a href="#Level-14-→-Level-15" class="headerlink" title="Level 14 → Level 15"></a>Level 14 → Level 15</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The <span class="keyword">password</span> <span class="keyword">for</span> the next <span class="keyword">level</span> can be retrieved <span class="keyword">by</span> submitting the <span class="keyword">password</span> <span class="keyword">of</span> the <span class="keyword">current</span> <span class="keyword">level</span> <span class="keyword">to</span> port <span class="number">30000</span> <span class="keyword">on</span> localhost.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit14@bandit.labs.overthewire.org -p 2220</span><br><span class="line">4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">telnet localhost 30000</span><br><span class="line">4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e</span><br><span class="line">nc localhost 30000</span><br><span class="line">4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e</span><br></pre></td></tr></table></figure>
+<h2 id="-14"><a href="#-14" class="headerlink" title></a><img src="/5903/15.png"></h2><h1 id="Level-15-→-Level-16"><a href="#Level-15-→-Level-16" class="headerlink" title="Level 15 → Level 16"></a>Level 15 → Level 16</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The <span class="keyword">password</span> <span class="keyword">for</span> the next <span class="keyword">level</span> can be retrieved <span class="keyword">by</span> submitting the <span class="keyword">password</span> <span class="keyword">of</span> the <span class="keyword">current</span> <span class="keyword">level</span> <span class="keyword">to</span> port <span class="number">30001</span> <span class="keyword">on</span> localhost <span class="keyword">using</span> SSL encryption.</span><br><span class="line"></span><br><span class="line">Helpful note: Getting “HEARTBEATING” <span class="keyword">and</span> “<span class="keyword">Read</span> R BLOCK”? Use -ign_eof <span class="keyword">and</span> <span class="keyword">read</span> the “CONNECTED COMMANDS” section <span class="keyword">in</span> the manpage. Next <span class="keyword">to</span> ‘R’ <span class="keyword">and</span> ‘Q’, the ‘B’ command <span class="keyword">also</span> works <span class="keyword">in</span> this <span class="keyword">version</span> <span class="keyword">of</span> that command…</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit15@bandit.labs.overthewire.org -p 2220</span><br><span class="line">BfMYroe26WYalil77FoDi9qh59eK5xNr</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">openssl s_client -connect localhost:30001</span><br><span class="line">BfMYroe26WYalil77FoDi9qh59eK5xNr</span><br><span class="line">cat /etc/bandit_pass/bandit15 | openssl s_client -connect localhost:30001 -quiet</span><br></pre></td></tr></table></figure>
+<h2 id="-15"><a href="#-15" class="headerlink" title></a><img src="/5903/16.png"></h2><h1 id="Level-16-→-Level-17"><a href="#Level-16-→-Level-17" class="headerlink" title="Level 16 → Level 17"></a>Level 16 → Level 17</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The credentials <span class="keyword">for</span> the next <span class="keyword">level</span> can be retrieved <span class="keyword">by</span> submitting the <span class="keyword">password</span> <span class="keyword">of</span> the <span class="keyword">current</span> <span class="keyword">level</span> <span class="keyword">to</span> a port <span class="keyword">on</span> localhost <span class="keyword">in</span> the <span class="keyword">range</span> <span class="number">31000</span> <span class="keyword">to</span> <span class="number">32000.</span> First find <span class="keyword">out</span> which <span class="keyword">of</span> these ports have a <span class="keyword">server</span> listening <span class="keyword">on</span> them. <span class="keyword">Then</span> find <span class="keyword">out</span> which <span class="keyword">of</span> those speak SSL <span class="keyword">and</span> which don’t. There <span class="keyword">is</span> <span class="keyword">only</span> <span class="number">1</span> <span class="keyword">server</span> that will give the next credentials, the others will simply send back <span class="keyword">to</span> you whatever you send <span class="keyword">to</span> it.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit16@bandit.labs.overthewire.org -p 2220</span><br><span class="line">cluFn7wTiGryunymYOu4RcffSxQluehd</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nmap -p 31000-32000 localhost</span><br><span class="line"><span class="comment">#对开放的端口尝试连接，在31790发现密钥</span></span><br><span class="line">cat /etc/bandit_pass/bandit16 | openssl s_client -connect localhost:31790 -quiet</span><br></pre></td></tr></table></figure>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">-----<span class="keyword">BEGIN</span> RSA PRIVATE KEY-----</span><br><span class="line">MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ</span><br><span class="line">imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ</span><br><span class="line">Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu</span><br><span class="line">DSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbW</span><br><span class="line">JGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNX</span><br><span class="line">x0YVztz/zbIkPjfkU1jHS+<span class="number">9</span>EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvD</span><br><span class="line">KHcj10nqcoBc4oE11aFYQwik7xfW+<span class="number">24</span>pRNuDE6SFthOar69jp5RlLwD1NhPx3iBl</span><br><span class="line">J9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovd</span><br><span class="line">d8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nC</span><br><span class="line">YNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8A</span><br><span class="line">vLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama</span><br><span class="line">+TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT</span><br><span class="line"><span class="number">8</span>c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnx</span><br><span class="line">SatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHd</span><br><span class="line">HCctNi<span class="regexp">/FwjulhttFx/</span>rHYKhLidZDFYeiE<span class="regexp">/v45bN4yFm8x7R/</span>b0iE7KaszX+Exdvt</span><br><span class="line">SghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0A</span><br><span class="line">R57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDi</span><br><span class="line">Ttiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCg</span><br><span class="line">R8VdwSk8r9FGLS+<span class="number">9</span>aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiu</span><br><span class="line">L8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Ni</span><br><span class="line">blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU</span><br><span class="line">YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/<span class="number">9</span>p7ftpxm0TSgyvmfLF2MIAEwyzRqaM</span><br><span class="line"><span class="number">77</span>pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+<span class="number">9</span>Cq0b</span><br><span class="line">dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3</span><br><span class="line">vBgsyi<span class="regexp">/sN3RqRBcGU40fOoZyfAMT8s1m/u</span>Yv52O6IgeuZ/ujbjY=</span><br><span class="line">-----<span class="keyword">END</span> RSA PRIVATE KEY-----</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir /tmp/jxswcy</span><br><span class="line">vim /tmp/jxswcy/sshkey.private</span><br><span class="line">chmod 600 /tmp/jxswcy/sshkey.private</span><br><span class="line">ssh -i /tmp/jxswcy/sshkey.private bandit17@localhost</span><br><span class="line">cat /etc/bandit_pass/bandit17</span><br></pre></td></tr></table></figure>
+<h2 id="-16"><a href="#-16" class="headerlink" title></a><img src="/5903/17.png"></h2><h1 id="Level-17-→-Level-18"><a href="#Level-17-→-Level-18" class="headerlink" title="Level 17 → Level 18"></a>Level 17 → Level 18</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">There are <span class="number">2</span> files <span class="keyword">in</span> the homedirectory: passwords.<span class="built_in">old</span> <span class="keyword">and</span> passwords.<span class="built_in">new</span>. The <span class="keyword">password</span> <span class="keyword">for</span> the next <span class="keyword">level</span> <span class="keyword">is</span> <span class="keyword">in</span> passwords.<span class="built_in">new</span> <span class="keyword">and</span> <span class="keyword">is</span> the <span class="keyword">only</span> <span class="type">line</span> that has been changed <span class="keyword">between</span> passwords.<span class="built_in">old</span> <span class="keyword">and</span> passwords.<span class="built_in">new</span></span><br><span class="line"></span><br><span class="line">NOTE: <span class="keyword">if</span> you have solved this <span class="keyword">level</span> <span class="keyword">and</span> see ‘Byebye!’ <span class="keyword">when</span> trying <span class="keyword">to</span> <span class="keyword">log</span> <span class="keyword">into</span> bandit18, this <span class="keyword">is</span> related <span class="keyword">to</span> the next <span class="keyword">level</span>, bandit19</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit17@bandit.labs.overthewire.org -p 2220</span><br><span class="line">xLYVMN9WE5zQ5vHacb0sZEVqbrp7nBTn</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diff passwords.new passwords.old</span><br></pre></td></tr></table></figure>
+
+<h2 id="-17"><a href="#-17" class="headerlink" title></a><img src="/5903/18.png"></h2><h1 id="Level-18-→-Level-19"><a href="#Level-18-→-Level-19" class="headerlink" title="Level 18 → Level 19"></a>Level 18 → Level 19</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The <span class="keyword">password</span> <span class="keyword">for</span> the next <span class="keyword">level</span> <span class="keyword">is</span> stored <span class="keyword">in</span> a file readme <span class="keyword">in</span> the homedirectory. Unfortunately, someone has modified .bashrc <span class="keyword">to</span> <span class="keyword">log</span> you <span class="keyword">out</span> <span class="keyword">when</span> you <span class="keyword">log</span> <span class="keyword">in</span> <span class="keyword">with</span> SSH.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit18@bandit.labs.overthewire.org -p 2220</span><br><span class="line">kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd</span><br></pre></td></tr></table></figure>
+<p>因为有人修改了.bashrc，通过bandit17登录bandit18</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh -T bandit18@localhost</span><br><span class="line">kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd</span><br><span class="line">cat readme</span><br></pre></td></tr></table></figure>
+<h2 id="-18"><a href="#-18" class="headerlink" title></a><img src="/5903/19.png"></h2><h1 id="Level-19-→-Level-20"><a href="#Level-19-→-Level-20" class="headerlink" title="Level 19 → Level 20"></a>Level 19 → Level 20</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">To</span> gain <span class="keyword">access</span> <span class="keyword">to</span> the next <span class="keyword">level</span>, you should use the setuid binary <span class="keyword">in</span> the homedirectory. <span class="keyword">Execute</span> it <span class="keyword">without</span> arguments <span class="keyword">to</span> find <span class="keyword">out</span> how <span class="keyword">to</span> use it. The <span class="keyword">password</span> <span class="keyword">for</span> this <span class="keyword">level</span> can be <span class="built_in">found</span> <span class="keyword">in</span> the usual place (/etc/bandit_pass), <span class="keyword">after</span> you have used the setuid binary.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit19@bandit.labs.overthewire.org -p 2220</span><br><span class="line">IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bandit20-do cat /etc/bandit_pass/bandit20</span><br></pre></td></tr></table></figure>
+<h2 id="-19"><a href="#-19" class="headerlink" title></a><img src="/5903/20.png"></h2><h1 id="Level-20-→-Level-21"><a href="#Level-20-→-Level-21" class="headerlink" title="Level 20 → Level 21"></a>Level 20 → Level 21</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">There <span class="keyword">is</span> a setuid binary <span class="keyword">in</span> the homedirectory that does the <span class="keyword">following</span>: it makes a <span class="keyword">connection</span> <span class="keyword">to</span> localhost <span class="keyword">on</span> the port you specify <span class="keyword">as</span> a commandline argument. It <span class="keyword">then</span> reads a <span class="type">line</span> <span class="keyword">of</span> <span class="type">text</span> <span class="keyword">from</span> the <span class="keyword">connection</span> <span class="keyword">and</span> compares it <span class="keyword">to</span> the <span class="keyword">password</span> <span class="keyword">in</span> the previous <span class="keyword">level</span> (bandit20). <span class="keyword">If</span> the <span class="keyword">password</span> <span class="keyword">is</span> correct, it will transmit the <span class="keyword">password</span> <span class="keyword">for</span> the next <span class="keyword">level</span> (bandit21).</span><br><span class="line"></span><br><span class="line">NOTE: Try connecting <span class="keyword">to</span> your own network daemon <span class="keyword">to</span> see <span class="keyword">if</span> it works <span class="keyword">as</span> you think</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit20@bandit.labs.overthewire.org -p 2220</span><br><span class="line">GbKksEFF4yrVs6il55v6gwY5aVje5f0j</span><br></pre></td></tr></table></figure>
+<p>先在一台上开启监听</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lvp 1234 &lt; /etc/bandit_pass/bandit20</span><br></pre></td></tr></table></figure>
+<p>再在另一台上运行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./suconnect 1234</span><br></pre></td></tr></table></figure>
+<p><img src="/5903/21.png"><br><img src="/5903/22.png"></p>
+<hr>
+<h1 id="Level-21-→-Level-22"><a href="#Level-21-→-Level-22" class="headerlink" title="Level 21 → Level 22"></a>Level 21 → Level 22</h1><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A program <span class="keyword">is</span> <span class="built_in">running</span> automatically <span class="keyword">at</span> regular intervals <span class="keyword">from</span> cron, <span class="keyword">the</span> <span class="built_in">time</span>-based job scheduler. Look <span class="keyword">in</span> /etc/cron.d/ <span class="keyword">for</span> <span class="keyword">the</span> configuration <span class="keyword">and</span> see what command <span class="keyword">is</span> being executed.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit21@bandit.labs.overthewire.org -p 2220</span><br><span class="line">gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ls /etc/cron.d/</span><br><span class="line">cat /etc/cron.d/*</span><br><span class="line">cat /usr/bin/cronjob_bandit*</span><br><span class="line">cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv</span><br></pre></td></tr></table></figure>
+<h2 id="-20"><a href="#-20" class="headerlink" title></a><img src="/5903/23.png"></h2><h1 id="Level-22-→-Level-23"><a href="#Level-22-→-Level-23" class="headerlink" title="Level 22 → Level 23"></a>Level 22 → Level 23</h1><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A program <span class="keyword">is</span> <span class="built_in">running</span> automatically <span class="keyword">at</span> regular intervals <span class="keyword">from</span> cron, <span class="keyword">the</span> <span class="built_in">time</span>-based job scheduler. Look <span class="keyword">in</span> /etc/cron.d/ <span class="keyword">for</span> <span class="keyword">the</span> configuration <span class="keyword">and</span> see what command <span class="keyword">is</span> being executed.</span><br><span class="line"></span><br><span class="line">NOTE: Looking <span class="keyword">at</span> shell scripts written <span class="keyword">by</span> other people <span class="keyword">is</span> a very useful skill. The <span class="keyword">script</span> <span class="keyword">for</span> this level <span class="keyword">is</span> intentionally made easy <span class="keyword">to</span> <span class="built_in">read</span>. If you are having problems understanding what <span class="keyword">it</span> <span class="keyword">does</span>, <span class="keyword">try</span> executing <span class="keyword">it</span> <span class="keyword">to</span> see <span class="keyword">the</span> debug information <span class="keyword">it</span> prints.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit22@bandit.labs.overthewire.org -p 2220</span><br><span class="line">Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat /usr/bin/cronjob_bandit23.sh</span><br><span class="line"><span class="built_in">echo</span> I am user bandit23 | md5sum | cut -d <span class="string">&#x27; &#x27;</span> -f 1</span><br><span class="line">cat /tmp/8ca319486bfbbc3663ea0fbe81326349</span><br></pre></td></tr></table></figure>
+<h2 id="-21"><a href="#-21" class="headerlink" title></a><img src="/5903/24.png"></h2><h1 id="Level-23-→-Level-24"><a href="#Level-23-→-Level-24" class="headerlink" title="Level 23 → Level 24"></a>Level 23 → Level 24</h1><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">A program <span class="keyword">is</span> <span class="built_in">running</span> automatically <span class="keyword">at</span> regular intervals <span class="keyword">from</span> cron, <span class="keyword">the</span> <span class="built_in">time</span>-based job scheduler. Look <span class="keyword">in</span> /etc/cron.d/ <span class="keyword">for</span> <span class="keyword">the</span> configuration <span class="keyword">and</span> see what command <span class="keyword">is</span> being executed.</span><br><span class="line"></span><br><span class="line">NOTE: This level requires you <span class="keyword">to</span> create your own <span class="keyword">first</span> shell-<span class="keyword">script</span>. This <span class="keyword">is</span> a very big step <span class="keyword">and</span> you should be proud <span class="keyword">of</span> yourself when you beat this level!</span><br><span class="line"></span><br><span class="line">NOTE <span class="number">2</span>: Keep <span class="keyword">in</span> mind <span class="keyword">that</span> your shell <span class="keyword">script</span> <span class="keyword">is</span> removed once executed, so you may want <span class="keyword">to</span> keep a <span class="keyword">copy</span> <span class="keyword">around</span>…</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit23@bandit.labs.overthewire.org -p 2220</span><br><span class="line">jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cat /usr/bin/cronjob_bandit24.sh</span><br><span class="line">mkdir /tmp/jxswcy24</span><br><span class="line">vim /tmp/jxswcy24/jxswcy.sh</span><br><span class="line">chmod 777 /tmp/jxswcy24</span><br><span class="line">chmod 777 /tmp/jxswcy24/jxswcy.sh</span><br><span class="line">cp /tmp/jxswcy24/jxswcy.sh /var/spool/bandit24/</span><br><span class="line">cat /tmp/jxswcy24/password</span><br></pre></td></tr></table></figure>
+<h2 id="-22"><a href="#-22" class="headerlink" title></a><img src="/5903/25.png"></h2><h1 id="Level-24-→-Level-25"><a href="#Level-24-→-Level-25" class="headerlink" title="Level 24 → Level 25"></a>Level 24 → Level 25</h1><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A daemon <span class="keyword">is</span> listening <span class="keyword">on</span> port <span class="number">30002</span> <span class="keyword">and</span> will give you the <span class="keyword">password</span> <span class="keyword">for</span> bandit25 <span class="keyword">if</span> given the <span class="keyword">password</span> <span class="keyword">for</span> bandit24 <span class="keyword">and</span> a secret <span class="type">numeric</span> <span class="number">4</span>-digit pincode. There <span class="keyword">is</span> <span class="keyword">no</span> way <span class="keyword">to</span> retrieve the pincode <span class="keyword">except</span> <span class="keyword">by</span> going through <span class="keyword">all</span> <span class="keyword">of</span> the <span class="number">10000</span> combinations, <span class="keyword">called</span> brute-forcing.</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh bandit24@bandit.labs.overthewire.org -p 2220</span><br><span class="line">UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jxswcy 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jxswcy 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/6760.html" rel="prev" title="vulhub tomcat CVE-2017-12615 漏洞复现">
+                  <i class="fa fa-chevron-left"></i> vulhub tomcat CVE-2017-12615 漏洞复现
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/53922.html" rel="next" title="vulhub tomcat tomcat8 漏洞复现">
+                  vulhub tomcat tomcat8 漏洞复现 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jxswcy</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">365k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

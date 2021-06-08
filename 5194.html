@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jxswcy.top&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="明文最简单的 1strings a.pcap | grep -i -E &amp;#x27;flag|ctf&amp;#x27; 密文搜索常见的几个加密 123456#16strings a.pcap | grep -i -E &amp;#x27;666c6167|464c4147|637466|435446&amp;#x27;#base64strings a.pcap | grep -E &amp;#x27;ZmxhZ|RkxBR|Y">
+<meta property="og:type" content="article">
+<meta property="og:title" content="misc study 流量包">
+<meta property="og:url" content="https://jxswcy.top/5194.html">
+<meta property="og:site_name" content="jxswcy&#39;s blog">
+<meta property="og:description" content="明文最简单的 1strings a.pcap | grep -i -E &amp;#x27;flag|ctf&amp;#x27; 密文搜索常见的几个加密 123456#16strings a.pcap | grep -i -E &amp;#x27;666c6167|464c4147|637466|435446&amp;#x27;#base64strings a.pcap | grep -E &amp;#x27;ZmxhZ|RkxBR|Y">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-27T10:13:12.000Z">
+<meta property="article:modified_time" content="2020-11-02T09:55:25.789Z">
+<meta property="article:author" content="jxswcy">
+<meta property="article:tag" content="pcap">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://jxswcy.top/5194.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;jxswcy.top&#x2F;5194.html&quot;,&quot;path&quot;:&quot;5194.html&quot;,&quot;title&quot;:&quot;misc study 流量包&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>misc study 流量包 | jxswcy's blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jxswcy's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hello CTF</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%8E%E6%96%87"><span class="nav-number">1.</span> <span class="nav-text">明文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AF%86%E6%96%87"><span class="nav-number">2.</span> <span class="nav-text">密文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%8C%85"><span class="nav-number">3.</span> <span class="nav-text">数据包</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#USB"><span class="nav-number">4.</span> <span class="nav-text">USB</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E6%B5%81%E9%87%8F"><span class="nav-number">4.1.</span> <span class="nav-text">鼠标流量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E6%B5%81%E9%87%8F"><span class="nav-number">4.2.</span> <span class="nav-text">键盘流量</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jxswcy"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">jxswcy</p>
+  <div class="site-description" itemprop="description">Life is short. You need Python.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/5194.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          misc study 流量包
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-27 18:13:12" itemprop="dateCreated datePublished" datetime="2020-10-27T18:13:12+08:00">2020-10-27</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-11-02 17:55:25" itemprop="dateModified" datetime="2020-11-02T17:55:25+08:00">2020-11-02</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Misc/" itemprop="url" rel="index"><span itemprop="name">Misc</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h1 id="明文"><a href="#明文" class="headerlink" title="明文"></a>明文</h1><p>最简单的</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strings a.pcap | <span class="type">grep</span> -i -E &#x27;flag|<span class="type">ctf</span>&#x27;</span><br></pre></td></tr></table></figure>
+<h1 id="密文"><a href="#密文" class="headerlink" title="密文"></a>密文</h1><p>搜索常见的几个加密</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#16</span></span><br><span class="line"><span class="attribute">strings</span> a.pcap | grep -i -E &#x27;<span class="number">666</span>c<span class="number">6167</span>|<span class="number">464</span>c<span class="number">4147</span>|<span class="number">637466</span>|<span class="number">435446</span>&#x27;</span><br><span class="line"><span class="comment">#base64</span></span><br><span class="line"><span class="attribute">strings</span> a.pcap | grep -E &#x27;ZmxhZ|RkxBR|Y<span class="number">3</span>Rme|Q<span class="number">1</span>RG&#x27;</span><br><span class="line"><span class="comment">#unicode</span></span><br><span class="line"><span class="attribute">strings</span> a.pcap | grep -E &#x27;&amp;#<span class="number">102</span>;&amp;#<span class="number">108</span>;&amp;#<span class="number">97</span>;&amp;#<span class="number">103</span>;|&amp;#<span class="number">70</span>;&amp;#<span class="number">76</span>;&amp;#<span class="number">65</span>;&amp;#<span class="number">71</span>;|&amp;#<span class="number">99</span>;&amp;#<span class="number">116</span>;&amp;#<span class="number">102</span>;|&amp;#<span class="number">67</span>;&amp;#<span class="number">84</span>;&amp;#<span class="number">70</span>;&#x27;</span><br></pre></td></tr></table></figure>
+<h1 id="数据包"><a href="#数据包" class="headerlink" title="数据包"></a>数据包</h1><p>在压缩包中或者图片中，熟悉rar，zip，tar.gz，jpg，png等常见的文件头，以及jpg，png的base64格式头部特征，提取数据</p>
+<h1 id="USB"><a href="#USB" class="headerlink" title="USB"></a>USB</h1><p>USB流量可以很杂，可以看看<a target="_blank" rel="noopener" href="https://github.com/FengJungle/USB_Protocol_CH">USB2.0协议</a><br>最基础最简单是则是键盘流量以及鼠标流量</p>
+<h2 id="鼠标流量"><a href="#鼠标流量" class="headerlink" title="鼠标流量"></a>鼠标流量</h2><p>首先要抓取流量</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tshark -r usb.pcap -T fields -e usb.capdata | sed <span class="string">&#x27;/^\s*$/d&#x27;</span> &gt; usbdata.txt</span><br></pre></td></tr></table></figure>
+<p>如果提取出来的数据没有冒号，可以用脚本来加上冒号（因为一般的脚本都会按照有冒号的数据来识别,有冒号时提取数据的[6:8]，无冒号时数据在[4:6])</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#加冒号脚本</span></span><br><span class="line">f=<span class="built_in">open</span>(<span class="string">&#x27;usbdata.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">fi=<span class="built_in">open</span>(<span class="string">&#x27;out.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line"><span class="keyword">while</span> <span class="number">1</span>:</span><br><span class="line">    a=f.readline().strip()</span><br><span class="line">    <span class="keyword">if</span> a:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(a)==<span class="number">8</span>: <span class="comment">#鼠标流量</span></span><br><span class="line">        <span class="comment">#if len(a)==16: #键盘流量</span></span><br><span class="line">            out=<span class="string">&#x27;&#x27;</span></span><br><span class="line">            <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(a),<span class="number">2</span>):</span><br><span class="line">                <span class="keyword">if</span> i+<span class="number">2</span> != <span class="built_in">len</span>(a):</span><br><span class="line">                    out+=a[i]+a[i+<span class="number">1</span>]+<span class="string">&quot;:&quot;</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    out+=a[i]+a[i+<span class="number">1</span>]</span><br><span class="line">            fi.write(out)</span><br><span class="line">            fi.write(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"></span><br><span class="line">fi.close()</span><br></pre></td></tr></table></figure>
+<p>转换坐标轴</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#转换坐标轴脚本</span></span><br><span class="line">nums = []</span><br><span class="line">keys = <span class="built_in">open</span>(<span class="string">&#x27;out.txt&#x27;</span>,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">f = <span class="built_in">open</span>(<span class="string">&#x27;xy.txt&#x27;</span>,<span class="string">&#x27;w&#x27;</span>)</span><br><span class="line">posx = <span class="number">0</span></span><br><span class="line">posy = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> line <span class="keyword">in</span> keys:</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(line) != <span class="number">12</span> :</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    x = <span class="built_in">int</span>(line[<span class="number">3</span>:<span class="number">5</span>],<span class="number">16</span>)</span><br><span class="line">    y = <span class="built_in">int</span>(line[<span class="number">6</span>:<span class="number">8</span>],<span class="number">16</span>)</span><br><span class="line">    <span class="keyword">if</span> x &gt; <span class="number">127</span> :</span><br><span class="line">        x -= <span class="number">256</span></span><br><span class="line">    <span class="keyword">if</span> y &gt; <span class="number">127</span> :</span><br><span class="line">        y -= <span class="number">256</span></span><br><span class="line">    posx += x</span><br><span class="line">    posy += y</span><br><span class="line">    btn_flag = <span class="built_in">int</span>(line[<span class="number">0</span>:<span class="number">2</span>],<span class="number">16</span>)  <span class="comment"># 1 for left , 2 for right , 0 for nothing</span></span><br><span class="line">    <span class="keyword">if</span> btn_flag == <span class="number">2</span> : <span class="comment"># 1</span></span><br><span class="line">        f.write(<span class="built_in">str</span>(posx))</span><br><span class="line">        f.write(<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">        f.write(<span class="built_in">str</span>(posy))</span><br><span class="line">        f.write(<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+
+<h2 id="键盘流量"><a href="#键盘流量" class="headerlink" title="键盘流量"></a>键盘流量</h2>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jxswcy 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jxswcy 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/pcap/" rel="tag"><i class="fa fa-tag"></i> pcap</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/20422.html" rel="prev" title="NACTF 2020 writeup">
+                  <i class="fa fa-chevron-left"></i> NACTF 2020 writeup
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/20422.html" rel="next" title="湖湘杯 2020 writeup">
+                  湖湘杯 2020 writeup <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jxswcy</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">365k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

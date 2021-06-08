@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css" integrity="sha256-no0c5ccDODBwp+9hSmV5VvPpKwHCpbVzXHexIkupM6U=" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js" integrity="sha256-a5YRB27CcBwBFcT5EF/f3E4vzIqyHrSR878nseNYw64=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;jxswcy.top&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.5.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;&#x2F;search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="小伙伴把非web题拿出来，云做题参与了一把。 miscmisc1直接cat 1cat badimages | grep -i flag 1flag&amp;#123;03325d76-f73d-48b0-a075-6f8062ad2d62&amp;#125; misc2修改为zip文件，在[Content_Types].xml中找到flag的前半部分，16进制转ASCII 1666c61677b323661666">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zjwriteup">
+<meta property="og:url" content="https://jxswcy.top/29408.html">
+<meta property="og:site_name" content="jxswcy&#39;s blog">
+<meta property="og:description" content="小伙伴把非web题拿出来，云做题参与了一把。 miscmisc1直接cat 1cat badimages | grep -i flag 1flag&amp;#123;03325d76-f73d-48b0-a075-6f8062ad2d62&amp;#125; misc2修改为zip文件，在[Content_Types].xml中找到flag的前半部分，16进制转ASCII 1666c61677b323661666">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-22T10:05:35.000Z">
+<meta property="article:modified_time" content="2020-10-24T08:33:03.342Z">
+<meta property="article:author" content="jxswcy">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://jxswcy.top/29408.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;jxswcy.top&#x2F;29408.html&quot;,&quot;path&quot;:&quot;29408.html&quot;,&quot;title&quot;:&quot;zjwriteup&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>zjwriteup | jxswcy's blog</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">jxswcy's blog</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hello CTF</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#misc"><span class="nav-number">1.</span> <span class="nav-text">misc</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#misc1"><span class="nav-number">1.1.</span> <span class="nav-text">misc1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#misc2"><span class="nav-number">1.2.</span> <span class="nav-text">misc2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#misc3"><span class="nav-number">1.3.</span> <span class="nav-text">misc3</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#crypto"><span class="nav-number">2.</span> <span class="nav-text">crypto</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#crypto1"><span class="nav-number">2.1.</span> <span class="nav-text">crypto1</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#app"><span class="nav-number">3.</span> <span class="nav-text">app</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#app1"><span class="nav-number">3.1.</span> <span class="nav-text">app1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#app2"><span class="nav-number">3.2.</span> <span class="nav-text">app2</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="jxswcy"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">jxswcy</p>
+  <div class="site-description" itemprop="description">Life is short. You need Python.</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">19</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jxswcy.top/29408.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="jxswcy">
+      <meta itemprop="description" content="Life is short. You need Python.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jxswcy's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          zjwriteup
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-22 18:05:35" itemprop="dateCreated datePublished" datetime="2020-10-22T18:05:35+08:00">2020-10-22</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-10-24 16:33:03" itemprop="dateModified" datetime="2020-10-24T16:33:03+08:00">2020-10-24</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>9 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>小伙伴把非web题拿出来，云做题参与了一把。</p>
+<h1 id="misc"><a href="#misc" class="headerlink" title="misc"></a>misc</h1><h2 id="misc1"><a href="#misc1" class="headerlink" title="misc1"></a>misc1</h2><p>直接cat</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat badimages | grep -i flag</span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">03325</span>d<span class="number">76</span>-f<span class="number">73</span>d-<span class="number">48</span>b<span class="number">0</span>-a<span class="number">075</span>-<span class="number">6</span>f<span class="number">8062</span>ad<span class="number">2</span>d<span class="number">62</span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="misc2"><a href="#misc2" class="headerlink" title="misc2"></a>misc2</h2><p>修改为zip文件，在<code>[Content_Types].xml</code>中找到flag的前半部分，16进制转ASCII</p>
+<figure class="highlight llvm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">666</span><span class="keyword">c</span><span class="number">61677</span>b<span class="number">32366166623764372</span>d<span class="number">366438302</span>d<span class="number">343762342</span>d</span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;26afb7d7-6d80-<span class="number">47b4</span>-</span><br></pre></td></tr></table></figure>
+<p>在<code>sharedStrings.xml</code>中找到flag的后半部分<code>8e07-83402c675d18&#125;</code></p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">26</span>afb<span class="number">7</span>d<span class="number">7</span>-<span class="number">6</span>d<span class="number">80</span>-<span class="number">47</span>b<span class="number">4</span>-<span class="number">8</span>e<span class="number">07</span>-<span class="number">83402</span>c<span class="number">675</span>d<span class="number">18</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="misc3"><a href="#misc3" class="headerlink" title="misc3"></a>misc3</h2><p>追踪tcp流，发现一个docx文件和另一个base64加密的未知文件</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">TVqQAAMAAAAEAAAA</span>//<span class="number">8</span>AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA<span class="number">4</span>fug<span class="number">4</span>AtAnNIbgBTM<span class="number">0</span>hVGhpcyBwcm<span class="number">9</span>ncmFtIGNhbm<span class="number">5</span>vdCBiZSBydW<span class="number">4</span>gaW<span class="number">4</span>gRE<span class="number">9</span>TIG<span class="number">1</span>vZGUuDQ<span class="number">0</span>KJAAAAAAAAABQRQAATAEDAFDH<span class="number">06</span>gAAAAAAAAAAOAADwMLAQI<span class="number">4</span>AAIAAAAOAAAAAAAAABAAAAAQAAAAIAAAAABAAAAQAAAAAgAABAAAAAEAAAAEAAAAAAAAAABAAAAAAgAARjoAAAIAAAAAACAAABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAAAwAABkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC<span class="number">50</span>ZXh<span class="number">0</span>AAAAKAAAAAAQAAAAAgAAAAIAAAAAAAAAAAAAAAAAACAAMGAuZGF<span class="number">0</span>YQAAAJAKAAAAIAAAAAwAAAAEAAAAAAAAAAAAAAAAAAAgADDgLmlkYXRhAABkAAAAADAAAAACAAAAEAAAAAAAAAAAAAAAAAAAQAAwwAAAAAAAAAAAAAAAAAAAAAC<span class="number">4</span>ACBAAP/gkP<span class="number">8</span>lODBAAJCQAAAAAAAAAAD/////AAAAAP////<span class="number">8</span>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL<span class="number">0</span>+J/rl<span class="number">28</span>bZdCT<span class="number">0</span>WynJZrkEAjFrFQNrFYPDOsUP<span class="number">1</span>IJh+AdCcpzYchbVB<span class="number">6</span>s<span class="number">9</span>fp<span class="number">4</span>/<span class="number">5</span>nUQbVQCYlj<span class="number">9</span>ZvVqdQ<span class="number">76</span>Af/ziVMIh/B<span class="number">7</span>g<span class="number">6</span>E<span class="number">0</span>NIu<span class="number">4</span>t<span class="number">5</span>Oqk<span class="number">8</span>fCzZhUICoU<span class="number">4</span>RS<span class="number">5</span>fsIcvJSZlqbjxAbWGBtykVXo<span class="number">8</span>SCEIPoSmL+o<span class="number">0</span>dg<span class="number">0</span>txgXubZdQzaDHbCfhjwzhUy+r<span class="number">1</span>wHzGQqTdF<span class="number">7</span>x/rt<span class="number">8</span>BYUZEI<span class="number">9</span>+BaIjwjw<span class="number">2</span>nntiyERY<span class="number">8</span>WrDikyLDEyPdqLyHmjyzIO<span class="number">2</span>/CWowuGKbwzHpBLpE<span class="number">12</span>bHXmtV<span class="number">5</span>bktHr<span class="number">0</span>D<span class="number">9</span>TJMxIz<span class="number">2</span>D<span class="number">4</span>wQk+A<span class="number">4</span>TRNjl<span class="number">3</span>YuAcNSh<span class="number">2</span>fOICkSIVXZ<span class="number">61</span>htk<span class="number">5</span>ZjF<span class="number">43</span>QODEmypcJFf<span class="number">6</span>v<span class="number">8</span>JhAaJUqwg<span class="number">9</span>MwNJTPddYNTKLeNkzqaMuTYjNU<span class="number">3</span>Ki<span class="number">5</span>+WmCJU/Kwj<span class="number">4</span>Y<span class="number">20</span>Hj<span class="number">0</span>BEXvPlrn<span class="number">3</span>Fbn<span class="number">3</span>kHBf<span class="number">0</span>bqbOe<span class="number">3</span>O+ark<span class="number">5</span>F+<span class="number">0</span>uo<span class="number">30</span>kZd<span class="number">6</span>iy<span class="number">4</span>bMqDxtvCNpzux<span class="number">6</span>Q<span class="number">4</span>nFnDVdwwv<span class="number">00</span>M<span class="number">9</span>dpSJR<span class="number">4</span>NhN+igBO<span class="number">8</span>XEX+CrA<span class="number">0</span>wCWMuk/qguUlf+Tn<span class="number">6</span>RZGptNm<span class="number">9</span>sLuv<span class="number">63</span>MclQeXRZJDzaGoRB<span class="number">3</span>k/eOxgcXNw<span class="number">0</span>ew<span class="number">2</span>GvbBEg+<span class="number">2</span>jcPHXSmmkaqa<span class="number">8</span>AG/PhufI<span class="number">1</span>Dq<span class="number">0</span>se<span class="number">9</span>ud<span class="number">8</span>KNADurRE<span class="number">2</span>m<span class="number">8</span>zx/hCB<span class="number">9</span>Uo<span class="number">6</span>w<span class="number">000</span>U<span class="number">6</span>Xz+xhtbV<span class="number">72</span>RcnjycloKUDbiOkkxuiNjTfUMRQ<span class="number">5</span>LZzcGIbZAGBR<span class="number">65</span>aKg<span class="number">487</span>lLXYpNBTGeF<span class="number">3</span>+Cg<span class="number">4</span>YrTFrTFf<span class="number">82</span>KFKzSjjhsbOBFOAi<span class="number">6</span>LzJt/PECjtKeGUrecUAnoSlzUiwwxahnVZRiOyB<span class="number">8</span>PcuaaTi<span class="number">0</span>jIZ<span class="number">8</span>jNIjURP<span class="number">8</span>KIkwi<span class="number">5</span>fl<span class="number">5</span>pSNtYUVF/ehfG<span class="number">5</span>/BJ<span class="number">1</span>LviCcPv<span class="number">1</span>vdRei<span class="number">7</span>yni<span class="number">53</span>R<span class="number">2</span>BR<span class="number">1</span>L<span class="number">1</span>v+DWfvxQg/<span class="number">60</span>Ii<span class="number">3</span>fymHHei<span class="number">31</span>iSsxaMZTdao<span class="number">2</span>RsSOmEUqKf<span class="number">0</span>xFgJkCOUj+Lrk+Aw<span class="number">0</span>deX<span class="number">3</span>MbWT+k<span class="number">4</span>pqyc/Iiqw<span class="number">2</span>BlbbHJwpPFq<span class="number">4</span>iBKe<span class="number">4</span>Tek<span class="number">3</span>M+a<span class="number">6</span>afbkXmpkXqd<span class="number">94</span>POFA<span class="number">8</span>E+WUa<span class="number">6</span>bJsIpiW/<span class="number">5</span>vwqYxbneHK<span class="number">3</span>cz<span class="number">22</span>glpkKYxOeNZIjBEoM<span class="number">86</span>xEfuvctC<span class="number">0</span>wVLiCSyDHU/i<span class="number">6</span>AlMyx<span class="number">1</span>BSVIbnO<span class="number">1</span>NPIdNEOnVn<span class="number">6</span>hs<span class="number">0</span>nZdAWqZUG<span class="number">7</span>HqwWKuRAV<span class="number">5</span>HGy<span class="number">1</span>q<span class="number">5</span>Twa/KU/rKVpgQzvVMQK<span class="number">8</span>TtCQu<span class="number">67</span>CO<span class="number">8</span>y<span class="number">9</span>grg/<span class="number">6</span>bN<span class="number">1</span>pNeV<span class="number">5</span>g<span class="number">8</span>vxvaSRBHrJBo<span class="number">94</span>+zdEO<span class="number">0</span>cPFmP<span class="number">1</span>ZSqpDJPnCOXYYGnxLea<span class="number">7</span>wf<span class="number">0</span>r<span class="number">58</span>X<span class="number">2</span>Iyb<span class="number">8</span>tNHVI<span class="number">4</span>mZLDVzEoFXaNoIzFfLyXtfYWPoNGgP<span class="number">0</span>YUGHHQ<span class="number">7</span>Jdp<span class="number">0</span>Q+/BvmsOv<span class="number">1</span>sNNELFmXVEP+PMkkcU//Q<span class="number">6</span>M<span class="number">2</span>Om<span class="number">7</span>oa<span class="number">1</span>l<span class="number">4</span>N/c<span class="number">2</span>O<span class="number">392</span>GdUI<span class="number">4</span>ZwgPH<span class="number">2</span>UNLGn<span class="number">58</span>FutZY<span class="number">2</span>qjkQ<span class="number">2</span>T<span class="number">68</span>+iH<span class="number">5</span>JJ/N<span class="number">2</span>GdFfx<span class="number">1</span>a+CTNQn/xKP<span class="number">8</span>W/L<span class="number">3</span>MLe<span class="number">6</span>KFBkxBf<span class="number">9</span>JHx<span class="number">3</span>/poUInxiN<span class="number">1</span>yuoeYFlbTDaXo<span class="number">6</span>tXwc<span class="number">6</span>Ky<span class="number">5</span>zuPr<span class="number">9</span>jegyygC<span class="number">7647</span>rdFDIy/<span class="number">8</span>y<span class="number">9</span>GL<span class="number">6</span>NKMtyVKrCLQG/WkFD<span class="number">8</span>SkXk<span class="number">1</span>NTDS<span class="number">0</span>n<span class="number">33</span>CwyqJ<span class="number">0</span>lsm<span class="number">9</span>Qj<span class="number">4</span>mg/GcX<span class="number">9</span>i<span class="number">0</span>MPoywcLYgE<span class="number">6</span>LMIETpaR<span class="number">50</span>SaO+SeDjDxpSrZwvGgRv<span class="number">6</span>lvVGUyu/gpMk<span class="number">3</span>V<span class="number">1</span>D<span class="number">6</span>x<span class="number">1</span>eArLHlF<span class="number">3</span>lRSKbBz<span class="number">2</span>LuAr<span class="number">1</span>hZEa+VBvo<span class="number">22</span>a<span class="number">8</span>HT<span class="number">9</span>gjd<span class="number">1</span>PXHNL+lEcn<span class="number">1</span>rljlT<span class="number">3</span>OKpVs<span class="number">3</span>WBrckNm<span class="number">1</span>HgyjV<span class="number">9</span>WpFN<span class="number">6</span>ihvTVF<span class="number">1</span>OYqEfbfVrnaltmAztHk<span class="number">5</span>HJsGkbu<span class="number">2</span>jX<span class="number">35</span>NYxEBH<span class="number">1</span>o<span class="number">5</span>zaoKZR<span class="number">5</span>NtP<span class="number">32</span>vZwC<span class="number">98</span>d<span class="number">2</span>XZP<span class="number">53</span>Yg<span class="number">4</span>w<span class="number">7</span>phN<span class="number">146</span>dOMZrgdyjbjyuQHRBSvgu<span class="number">6</span>neVPTd<span class="number">4</span>dd<span class="number">20</span>FO<span class="number">8</span>l<span class="number">0</span>Mfh<span class="number">7</span>JB+lTjzaStTc/rleO<span class="number">7</span>F<span class="number">18</span>KQtTcks<span class="number">2</span>yva<span class="number">5</span>XW<span class="number">7</span>B<span class="number">0</span>SytRd+UJzcrMy<span class="number">4</span>k<span class="number">5</span>Ey<span class="number">6</span>zLrbOnet/KUZjmNzxtT<span class="number">7</span>y/KaxUZ<span class="number">0</span>E<span class="number">7</span>v<span class="number">2</span>TlLa+H+tLD<span class="number">8</span>lQcxa<span class="number">5</span>Ke/C<span class="number">3</span>DamWwCzGVlsYPk<span class="number">1</span>pg<span class="number">0</span>WMzHYunQf<span class="number">7</span>MagOUf/<span class="number">3</span>uhcBv<span class="number">1</span>xacL<span class="number">1</span>DmRxIzELl+t/CEU<span class="number">8</span>suKdCATpEX<span class="number">9</span>fuJHbF<span class="number">9</span>axN<span class="number">4</span>EZJsrhGlBWr<span class="number">7</span>ISMjPsWrQWpIlTtnSaeWyc<span class="number">7</span>FWPuxYzGvwAU+PowKI<span class="number">7</span>eOpBz<span class="number">4</span>/<span class="number">6</span>ME/CoD<span class="number">3</span>EN<span class="number">9</span>OzT<span class="number">7</span>UNhyhoIw<span class="number">1</span>mHZ<span class="number">8</span>I<span class="number">33</span>MKv<span class="number">7</span>G<span class="number">4</span>WmJbeNzW<span class="number">3</span>s<span class="number">7</span>B<span class="number">0</span>TGWuNsYBKJF<span class="number">73</span>m<span class="number">2</span>SCqr<span class="number">7</span>/GB<span class="number">27</span>tGwKrZaw<span class="number">1</span>aG<span class="number">42</span>PwEDhx<span class="number">5</span>M<span class="number">7</span>EO<span class="number">7</span>J<span class="number">5</span>TlPsQmQCabQTrfOlqqf<span class="number">7</span>mXXX<span class="number">3</span>fUSWwRfVXzsGpCJNO<span class="number">5</span>NEq/FurhHUqKcRTWcd<span class="number">6</span>P<span class="number">3</span>p<span class="number">1</span>HonfzKrhEPmN/LRPqAD<span class="number">3</span>TUAuOgqkUSHA<span class="number">3</span>aC/YX<span class="number">7</span>qX<span class="number">9</span>yPSjlCt+efQgLBwKqUbxNh<span class="number">5</span>Ep/gxxB<span class="number">4</span>xVKpjfPlCyKuMlRIvuAvC<span class="number">0</span>SR/az<span class="number">1</span>bJJ<span class="number">5</span>msuGfEX<span class="number">80</span>aw<span class="number">4</span>+nKykzB<span class="number">5</span>YFGPtw/LEghxrU<span class="number">3</span>rQjkoscmXg<span class="number">2</span>ICTdQdwUZ<span class="number">0</span>mliRAbbMKhzUJGf/yo<span class="number">5</span>dke+aQq<span class="number">5</span>LpfYVJ<span class="number">6</span>hVsEzq+k<span class="number">9</span>IM<span class="number">0</span>JU<span class="number">7</span>R/lVo<span class="number">0</span>Upa<span class="number">7</span>FoM<span class="number">0</span>CSeq<span class="number">8</span>xd<span class="number">3</span>jpsF<span class="number">7</span>Y<span class="number">0</span>IeX<span class="number">5</span>ih<span class="number">9</span>xaEfZ+SYs<span class="number">3</span>Vh/Bi<span class="number">0</span>kaO<span class="number">9</span>EGyyir<span class="number">5</span>i<span class="number">3</span>gr<span class="number">25</span>YUSJVTcN<span class="number">8</span>v<span class="number">1</span>LDecmNtYT<span class="number">7</span>esyHjcJ<span class="number">6</span>kZjTC<span class="number">2</span>mQolQTz+FRxOXKNcXD<span class="number">8</span>xwo<span class="number">0</span>zAdyrWz+MtN<span class="number">9</span>UV<span class="number">8</span>t+LcJd+ru<span class="number">3</span>mXieRTdVzIW+F+<span class="number">6</span>o<span class="number">4</span>cB<span class="number">3</span>YJTV<span class="number">6</span>zGpJ<span class="number">4</span>AfNmweedJLIcUYtYHkKY/jXANeUiiBKzHnsqZmqppwvBdmkJ<span class="number">1</span>SyYKS<span class="number">5</span>MN<span class="number">8</span>Zjy<span class="number">9</span>uob<span class="number">4</span>jZxr/PEb<span class="number">1</span>CaPFBUSCQMEHvLqqmGueNuMS<span class="number">39</span>NcQDUaQHnalaw<span class="number">9</span>WfXSwZRIAblw<span class="number">92</span>nVcYGc<span class="number">73</span>LZGej<span class="number">5</span>D<span class="number">4</span>QyQgSK<span class="number">9</span>j<span class="number">7</span>oQw+<span class="number">8</span>sudiNlaBJCtllYEKG<span class="number">4</span>+<span class="number">9</span>yyLu<span class="number">10</span>CxnGEtZWSPP<span class="number">6</span>h<span class="number">8</span>svh<span class="number">1</span>x<span class="number">5</span>ncgpj<span class="number">5</span>qaJO<span class="number">1</span>+rSFSRo<span class="number">9</span>ibIaoPxgzKsW<span class="number">2</span>RtjBSWBhbjlKLO<span class="number">9</span>cg<span class="number">1</span>hlUa+RzDzbItEfUBfoz<span class="number">2</span>iUKzIo<span class="number">8</span>NkfUH+pSLGv<span class="number">3</span>JlqY<span class="number">61</span>iZBoFfxdSVA<span class="number">8</span>VB<span class="number">8</span>Fokv<span class="number">2</span>HLkkv<span class="number">7</span>L<span class="number">55</span>mqJbVd<span class="number">0</span>gvAyu<span class="number">4</span>kovLPZKrs<span class="number">5</span>jPuTk<span class="number">7</span>Z<span class="number">6</span>IvVn<span class="number">1</span>CYX<span class="number">1</span>U/E<span class="number">5</span>dKXNe+<span class="number">0</span>Lyj<span class="number">4</span>w<span class="number">4</span>eRKIdWEpGV<span class="number">01</span>KqR<span class="number">6</span>SUe<span class="number">9</span>CsYChWv<span class="number">4</span>sV<span class="number">2</span>izHEH/subzwicaviYoR<span class="number">9</span>I+fWlL<span class="number">8</span>qyc<span class="number">0</span>C+ff<span class="number">4</span>mGc/<span class="number">44</span>X<span class="number">9</span>VNKLnhF<span class="number">1</span>STnnsviJo<span class="number">3</span>VC<span class="number">8</span>PsbpXTvURTnRH<span class="number">8</span>d<span class="number">3</span>bPPHjQRGAULEJxk<span class="number">5</span>fmfBChM<span class="number">7</span>OVG<span class="number">19</span>TxsIVTAv<span class="number">3</span>gtw<span class="number">8</span>V<span class="number">5</span>eG<span class="number">6</span>Fb<span class="number">876</span>wiIgti+PMB<span class="number">0</span>yLIueABwXU<span class="number">05</span>dMYm<span class="number">1</span>LZTUu<span class="number">8</span>mYN<span class="number">3</span>PNvGpUQdMxpcnS<span class="number">44</span>qaCimX<span class="number">6</span>/UnFWjuk<span class="number">69</span>nxplToTISzjik<span class="number">5</span>kKwIaGsp<span class="number">71</span>pJd<span class="number">2</span>VByLHFdLFtfk/S<span class="number">9</span>qSJrk<span class="number">1</span>aGaO<span class="number">5</span>Y/BMA+STgE<span class="number">6</span>rfH<span class="number">8</span>x<span class="number">0</span>YZ/C<span class="number">60</span>qR<span class="number">88</span>dqPTuRdcdd<span class="number">1</span>hAtHcrdqra<span class="number">8</span>AawoN<span class="number">2</span>wxbld<span class="number">4</span>zBOGqtbnRhKjkYtVtAgOEfgQW/WCcaSgoJnwKsr<span class="number">8</span>fUdWOg<span class="number">0</span>+MxCsj<span class="number">1</span>/J+Ski/hpnZuVYu+p<span class="number">40</span>O<span class="number">3</span>WD/YhbbLG<span class="number">7</span>JPype<span class="number">5</span>WUZ+JYMhhdmZ<span class="number">6</span>lnw+<span class="number">3</span>BZjmKy<span class="number">38</span>o<span class="number">2</span>HaIgwbt<span class="number">5</span>ZtyyJ<span class="number">3</span>EF<span class="number">0</span>m<span class="number">32</span>cdlZY<span class="number">16</span>QtOJVlzXsfPcdyNCraZC<span class="number">0</span>fuu/<span class="number">7</span>dMgi+JyQPYjDAegEicIPrZgOGwVbOO<span class="number">40</span>OeCCephoh<span class="number">7</span>dZ<span class="number">9</span>WgpntV<span class="number">55</span>MSfMxazUd<span class="number">0</span>MVhwV<span class="number">87</span>GdNAZiTbnuuZFAVmdfP<span class="number">5</span>RDaVcXeSfJ<span class="number">87</span>iIrX/yrGa<span class="number">7</span>UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwwAAAAAAAAAAAAAFQwAAA<span class="number">4</span>MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQDAAAAAAAAAAAAAAQDAAAAAAAACcAEV<span class="number">4</span>aXRQcm<span class="number">9</span>jZXNzAAAAADAAAEtFUk<span class="number">5</span>FTDMyLmRsbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASTpyvIeBj<span class="number">7</span>fD+igiBwIEW<span class="number">487</span>LVKlpLrvkq<span class="number">2</span>N<span class="number">6</span>/Qz<span class="number">91</span>nb<span class="number">5</span>ytOcATs<span class="number">0</span>NkvpHf<span class="number">8</span>E<span class="number">2</span>CV<span class="number">0</span>aZqFGMG</span><br></pre></td></tr></table></figure>
+<p>exp</p>
+<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"><span class="title">f</span> = open(<span class="string">&quot;flag.txt&quot;</span>,&#x27;r&#x27;)</span><br><span class="line"><span class="class"><span class="keyword">data</span> = f.read()</span></span><br><span class="line"><span class="title">tmp</span> = base64.b64decode(<span class="class"><span class="keyword">data</span>)</span></span><br><span class="line"><span class="title">f2</span> = open(<span class="string">&quot;flag&quot;</span>,&#x27;wb&#x27;)</span><br><span class="line"><span class="title">f2</span>.write(tmp)</span><br></pre></td></tr></table></figure>
+<p>010editor发现是<code>exe</code>文件，运行得flag</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">9</span>cf<span class="number">83</span>b<span class="number">37</span>-<span class="number">2</span>e<span class="number">4</span>f-<span class="number">4</span>b<span class="number">29</span>-a<span class="number">36</span>c-c<span class="number">0</span>b<span class="number">51</span>f<span class="number">051866</span>&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="crypto"><a href="#crypto" class="headerlink" title="crypto"></a>crypto</h1><h2 id="crypto1"><a href="#crypto1" class="headerlink" title="crypto1"></a>crypto1</h2><figure class="highlight brainfuck"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span> --<span class="literal">-</span><span class="literal">-</span><span class="literal">-</span> <span class="string">.</span>--<span class="literal">-</span><span class="literal">-</span></span><br></pre></td></tr></table></figure>
+<p>摩斯密码</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">011001100110110001100001011001110111101100110111001110010110000100110001001101010011011001100110001100010010110100110011011000110011100001100100001011010011010001100110001100000110011000101101001110010110010100110110001100000010110100111000001100000011010001100001001100000110001101100100011000100011000000110100001101100011000101111101</span><br></pre></td></tr></table></figure>
+<p>二进制</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">79</span>a<span class="number">156</span>f<span class="number">1</span>-<span class="number">3</span>c<span class="number">8</span>d-<span class="number">4</span>f<span class="number">0</span>f-<span class="number">9</span>e<span class="number">60</span>-<span class="number">804</span>a<span class="number">0</span>cdb<span class="number">0461</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="app"><a href="#app" class="headerlink" title="app"></a>app</h1><h2 id="app1"><a href="#app1" class="headerlink" title="app1"></a>app1</h2><p>直接strings</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">flag</span>&#123;<span class="number">25</span>af<span class="number">9</span>d<span class="number">8</span>d-<span class="number">9359</span>-<span class="number">4320</span>-bc<span class="number">93</span>-a<span class="number">1</span>a<span class="number">6</span>c<span class="number">171</span>b<span class="number">380</span>&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="app2"><a href="#app2" class="headerlink" title="app2"></a>app2</h2><p>一堆字符与<code>0x12</code>异或</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python</span></span><br><span class="line"></span><br><span class="line">a=[<span class="number">0x0A</span>,<span class="number">0x74</span>,<span class="number">0x7E</span>,<span class="number">0x73</span>,<span class="number">0x75</span>,<span class="number">0x69</span>,<span class="number">0x20</span>,<span class="number">0x74</span>,<span class="number">0x25</span>,<span class="number">0x70</span>,<span class="number">0x23</span>,<span class="number">0x24</span>,<span class="number">0x70</span>,<span class="number">0x22</span>,<span class="number">0x3F</span>,<span class="number">0x22</span>,<span class="number">0x20</span>,<span class="number">0x20</span>,<span class="number">0x27</span>,<span class="number">0x3F</span>,<span class="number">0x26</span>,<span class="number">0x26</span>,<span class="number">0x70</span>,<span class="number">0x27</span>,<span class="number">0x3F</span>,<span class="number">0x2A</span>,<span class="number">0x25</span>,<span class="number">0x2B</span>,<span class="number">0x3F</span>,<span class="number">0x25</span>,<span class="number">0x27</span>,<span class="number">0x74</span>,<span class="number">0x77</span>,<span class="number">0x71</span>,<span class="number">0x21</span>,<span class="number">0x27</span>,<span class="number">0x24</span>,<span class="number">0x24</span>,<span class="number">0x24</span>,<span class="number">0x77</span>,<span class="number">0x2A</span>,<span class="number">0x6F</span>]</span><br><span class="line">b=[<span class="number">0x12</span>]</span><br><span class="line">c=<span class="string">&quot;&quot;</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="built_in">len</span>(a)):</span><br><span class="line">	c += <span class="built_in">chr</span>(b[<span class="number">0</span>]^a[i])</span><br><span class="line"><span class="built_in">print</span> c</span><br></pre></td></tr></table></figure>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flag&#123;2f7b16b0-<span class="number">0225</span>-<span class="number">44b5</span>-<span class="number">879</span>-75fec35666e8&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="jxswcy 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="jxswcy 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/39875.html" rel="prev" title="PHP利用PCRE回溯次数限制绕过某些安全限制">
+                  <i class="fa fa-chevron-left"></i> PHP利用PCRE回溯次数限制绕过某些安全限制
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/18201.html" rel="next" title="web study 无参数函数RCE">
+                  web study 无参数函数RCE <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">jxswcy</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">365k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">5:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+<!--
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+-->
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script class="next-config" data-name="nprogress" type="application/json">{&quot;enable&quot;:true,&quot;spinner&quot;:true}</script>
+  <script src="/js/third-party/nprogress.js"></script>
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
